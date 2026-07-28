@@ -1,0 +1,33 @@
+site_name: Media Server Guide
+site_author: Yanick Spichty
+
+theme:
+  name: material
+  palette:
+    scheme: slate # Gives it a sleek, dark terminal aesthetic
+    primary: blue grey
+    accent: light blue
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy # Adds a "copy" button to your terminal commands!
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - System Setup:
+      - Debian Installation: 01-debian.md
+      - User & Network: 02-network.md
+      - Storage (MergerFS): 03-storage.md
+      - Energy Optimization: 06-energy.md
+  - Containers & Routing:
+      - Docker & Services: 04-docker.md
+      - VPS Gateway: 05-vps.md
+  - Maintenance:
+      - Backups: 07-backups.md

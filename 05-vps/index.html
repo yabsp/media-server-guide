@@ -1,0 +1,1718 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Yanick Spichty">
+      
+      
+      
+        <link rel="prev" href="../04-docker/">
+      
+      
+        <link rel="next" href="../07-backups/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>VPS Gateway - Media Server Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vps-gateway" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Media Server Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VPS Gateway
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Media Server Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User & Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage (MergerFS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers & Routing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Containers & Routing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker & Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Gateway
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vps-initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Initial Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VPS Initial Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-forwarding-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Forwarding on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WireGuard Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WireGuard Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vps-server-config-etcwireguardwg0conf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Server Config (/etc/wireguard/wg0.conf)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-server-client-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Server Client Config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy-setup-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverse Proxy Setup (VPS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reverse Proxy Setup (VPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plex-configuration-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plex Configuration (Home)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Hardening
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Hardening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare API Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-npm-for-dns-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure NPM for DNS Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-firewall-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Firewall Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-admin-access-via-ssh-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Admin Access via SSH Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-security-crowdsec-ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Security: CrowdSec (IPS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Security: CrowdSec (IPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-crowdsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is CrowdSec?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-compose-modification-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Docker Compose Modification (The Agent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-log-acquisition-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Log Acquisition Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installing-the-enforcer-firewall-bouncer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Installing the Enforcer (Firewall Bouncer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrollment-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enrollment &amp; Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maintenance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vps-initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Initial Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VPS Initial Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip-forwarding-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IP Forwarding on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Server Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wireguard-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WireGuard Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WireGuard Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vps-server-config-etcwireguardwg0conf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPS Server Config (/etc/wireguard/wg0.conf)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-server-client-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Server Client Config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reverse-proxy-setup-vps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverse Proxy Setup (VPS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reverse Proxy Setup (VPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plex-configuration-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plex Configuration (Home)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-hardening" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Hardening
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Hardening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudflare-api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloudflare API Token
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-npm-for-dns-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure NPM for DNS Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-firewall-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Firewall Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-admin-access-via-ssh-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Admin Access via SSH Tunnel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-security-crowdsec-ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Security: CrowdSec (IPS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Security: CrowdSec (IPS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-crowdsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is CrowdSec?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-docker-compose-modification-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Docker Compose Modification (The Agent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-log-acquisition-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Log Acquisition Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-installing-the-enforcer-firewall-bouncer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Installing the Enforcer (Firewall Bouncer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrollment-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enrollment &amp; Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vps-gateway">VPS Gateway</h1>
+<h2 id="vps-initial-configuration">VPS Initial Configuration</h2>
+<p>We use a lightweight VPS (1 vCPU, 2GB RAM) running Debian. We utilize
+the hosting provider's hardware firewall instead of a local firewall
+(UFW) as it is easier and there are less possibilities for issues.</p>
+<h3 id="ip-forwarding-on-linux">IP Forwarding on Linux</h3>
+<p>By default, the Linux kernel acts strictly as a host, not a router. This
+means it instantly drops any network packet that is not specifically
+addressed to its own IP address.</p>
+<p>For our VPN Gateway setup, this behavior is a blocker. The VPS needs to
+act as a bridge:</p>
+<ul>
+<li>
+<p>It receives traffic from the internet (e.g., a request for Plex).</p>
+</li>
+<li>
+<p>It must pass this traffic from the physical network card (<code>eth0</code>) to the
+    virtual VPN interface (<code>wg0</code>).</p>
+</li>
+</ul>
+<p>Enabling <code>ip_forward</code> instructs the kernel to permit packets to traverse between
+network interfaces. We use the <code>sysctl.d</code> directory approach for
+configuration persistence.</p>
+<h3 id="server-setup">Server Setup</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 1. Update and Install basics </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>wireguard<span class="w"> </span>curl<span class="w"> </span>git
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 2. Enable IP Forwarding</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># We create a dedicated config file in /etc/sysctl.d/ instead of editing the main file.</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># This is more robust on minimal Linux images. </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;net.ipv4.ip_forward=1&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/sysctl.d/99-wireguard.conf
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Apply the changes immediately </span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>sysctl<span class="w"> </span>--system
+</code></pre></div>
+<h2 id="wireguard-configuration">WireGuard Configuration</h2>
+<p>We are using WireGuard to connect our media server with our VPS. There
+are some guides out there that ease the pain when setting up the whole
+thing - for example <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04">one for Ubuntu 20.04</a> that can be used for other
+versons and distros as well.
+WireGuard uses asymmetric cryptography. We must generate key pairs
+(Private/Public) on both the VPS and the Home Server.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Run this on BOTH servers to generate keys: </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>wg<span class="w"> </span>genkey<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>privatekey<span class="w"> </span><span class="p">|</span><span class="w"> </span>wg<span class="w"> </span>pubkey<span class="w"> </span>&gt;<span class="w"> </span>publickey
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Display keys for configuration (Copy these securely!) </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>cat<span class="w"> </span>privatekey
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cat<span class="w"> </span>publickey
+</code></pre></div>
+<h3 id="vps-server-config-etcwireguardwg0conf">VPS Server Config (/etc/wireguard/wg0.conf)</h3>
+<p>On the VPS, we configure the interface and define the Home Server as a
+Peer.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Interface]
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a># Internal Tunnel IP of the VPS
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Address = 10.10.10.1/24
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># Custom Port defined in Firewall 
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>ListenPort = 51821 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>PrivateKey = &lt;VPS_PRIVATE_KEY&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a># IP Masquerading Rules (NAT)
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># These rules ensure traffic leaving the VPS interface (eth0) appears to come from the VPS IP, \
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># enabling the return path for traffic originating from the Home Server. 
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>[Peer]
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a># The Home Server 
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>PublicKey = &lt;HOME_PUBLIC_KEY&gt; 
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a># The single IP allowed for the Home Server 
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>AllowedIPs = 10.10.10.2/32
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Start the WireGuard Service on VPS </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wg-quick@wg0
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>systemctl<span class="w"> </span>start<span class="w"> </span>wg-quick@wg0
+</code></pre></div>
+<h2 id="home-server-client-config">Home Server Client Config</h2>
+<p>The home server acts as the client. It initiates the connection to the
+VPS and uses <code>PersistentKeepalive</code> to keep the NAT session open through the home router.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 1. Install WireGuard on Home Server </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wireguard<span class="w"> </span>-y
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># 2. Configure the Interface </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/wireguard/wg0.conf
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[Interface] 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a># The Internal IP of the Home Server
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Address = 10.10.10.2/24 
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>PrivateKey = &lt;HOME_PRIVATE_KEY&gt;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>[Peer] # Connection details for the VPS 
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>PublicKey = &lt;VPS_PUBLIC_KEY&gt; 
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a># The Public IP of the VPS and the custom port defined earlier 
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a># Use this port or any other port you defined (keep in mind that a random port is better)
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Endpoint = &lt;VPS_PUBLIC_IP&gt;:51821 
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a># Route only traffic destined for the VPS internal IP through the tunnel 
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>AllowedIPs = 10.10.10.1/32 
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a># Critical: Sends a keepalive packet every 25s to prevent the home router 
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a># from closing the connection due to inactivity.
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>PersistentKeepalive = 25
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 3. Start the Tunnel </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>wg-quick@wg0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>wg-quick@wg0
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># 4. Verification </span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Ping the VPS internal IP to confirm connectivity</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>ping<span class="w"> </span><span class="m">10</span>.10.10.1
+</code></pre></div>
+<h2 id="reverse-proxy-setup-vps">Reverse Proxy Setup (VPS)</h2>
+<p>With the tunnel active, we deploy <a href="https://nginxproxymanager.com/guide/">Nginx Proxy Manager (NPM)</a> on the VPS.
+You can find more information in the NPM
+documentation. NPM will terminate SSL
+connections from the internet and route traffic through the WireGuard
+tunnel to the home server.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Install Docker on VPS </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Create Directory and Config </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/nginx-proxy<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/nginx-proxy<span class="w"> </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>vim<span class="w"> </span>docker-compose.yml
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>services:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  app:
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    image: &#39;jc21/nginx-proxy-manager:latest&#39;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    restart: unless-stopped
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    ports:
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>      - &#39;80:80&#39;     # Public HTTP Port
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>      - &#39;443:443&#39;   # Public HTTPS Port
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>      - &#39;81:81&#39;     # Admin Web Interface (setup only!)
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    volumes:
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>      - ./data:/data
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>      - ./letsencrypt:/etc/letsencrypt
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    environment:
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>      DISABLE_IPV6: &#39;true&#39;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    depends_on:
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>      - crowdsec
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 3. Start the Proxy </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="configuration-steps">Configuration Steps</h3>
+<ol>
+<li>
+<p><strong>DNS Record:</strong> Point an A-Record (e.g., <code>plex.yourdomain.com</code>) to the VPS Public IP.</p>
+</li>
+<li>
+<p><strong>Access Admin UI:</strong> Navigate to <code>http://&lt;VPS_IP&gt;:81</code> (Default: admin@example.com /
+    changeme).</p>
+</li>
+<li>
+<p><strong>Create Proxy Host:</strong></p>
+<ul>
+<li>
+<p><strong>Domain Name:</strong> plex.yourdomain.com</p>
+</li>
+<li>
+<p><strong>Scheme:</strong> http</p>
+</li>
+<li>
+<p><strong>Forward Host:</strong> 10.10.10.2 (Home Server VPN IP)</p>
+</li>
+<li>
+<p><strong>Forward Port:</strong> 32400</p>
+</li>
+<li>
+<p><strong>Websockets:</strong> Enabled (Critical for Plex)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SSL Tab:</strong> Request a new Let's Encrypt certificate and enable
+    "Force SSL".</p>
+</li>
+</ol>
+<h2 id="plex-configuration-home">Plex Configuration (Home)</h2>
+<p>Finally, instruct Plex to use the new public URL.</p>
+<ol>
+<li>
+<p>Open Plex Settings &gt; Network.</p>
+</li>
+<li>
+<p>Set <strong>Custom server access URLs</strong> to: <code>https://plex.yourdomain.com:443</code></p>
+</li>
+<li>
+<p>Disable and re-enable Remote Access to force a config refresh.</p>
+</li>
+</ol>
+<h2 id="security-hardening">Security Hardening</h2>
+<p>Once the Proxy Host is configured and confirmed working, we must secure
+the VPS by closing the administration port.</p>
+<p>We switch the SSL validation method to "DNS Challenge". This would
+allow us to close Port 80 completely, leaving only the encrypted HTTPS
+port open.
+<em>Note:</em> We are using cloudflare here.</p>
+<h3 id="cloudflare-api-token">Cloudflare API Token</h3>
+<ol>
+<li>
+<p>Go to Cloudflare Dashboard &gt; My Profile &gt; API Tokens.</p>
+</li>
+<li>
+<p>Create a token using the <strong>Edit zone DNS</strong> template for your specific domain.</p>
+</li>
+<li>
+<p>Copy the generated Token.</p>
+</li>
+</ol>
+<h3 id="configure-npm-for-dns-challenge">Configure NPM for DNS Challenge</h3>
+<p>In Nginx Proxy Manager, edit the Proxy Host:</p>
+<ul>
+<li>
+<p><strong>SSL Tab:</strong> Check "Use a DNS Challenges".</p>
+</li>
+<li>
+<p><strong>Provider:</strong> Cloudflare.</p>
+</li>
+<li>
+<p><strong>Credentials:</strong> Replace the token placeholder:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>dns_cloudflare_api_token = &lt;YOUR_CLOUDFLARE_TOKEN&gt;
+</code></pre></div>
+</li>
+</ul>
+<h3 id="final-firewall-rules">Final Firewall Rules</h3>
+<p>With DNS validation active, we can close Port 80. The only open ingress
+ports are now for the VPN tunnel and the encrypted HTTPS stream.</p>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Status</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>SSH Management</td>
+</tr>
+<tr>
+<td>443</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>HTTPS Streaming</td>
+</tr>
+<tr>
+<td>51821</td>
+<td>UDP</td>
+<td>Allow</td>
+<td>WireGuard Tunnel</td>
+</tr>
+<tr>
+<td>80</td>
+<td>TCP</td>
+<td>DENY</td>
+<td>Not needed (DNS-01 used)</td>
+</tr>
+<tr>
+<td>81</td>
+<td>TCP</td>
+<td>DENY</td>
+<td>Admin UI (Tunnel only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="secure-admin-access-via-ssh-tunnel">Secure Admin Access via SSH Tunnel</h3>
+<p>To access the Nginx Proxy Manager interface in the future without
+exposing the port to the internet, we use local port forwarding.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Run this on your local machine to create a secure tunnel</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># Syntax: ssh -L &lt;LocalPort&gt;:127.0.0.1:&lt;RemotePort&gt; &lt;User&gt;@&lt;Host&gt; </span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">8888</span>:127.0.0.1:81<span class="w"> </span>debian@&lt;VPS_PUBLIC_IP&gt;
+</code></pre></div>
+<p>Now, open your browser and navigate to: <strong>http://localhost:8888</strong></p>
+<p>The traffic is now encrypted inside the SSH session, making it secure
+even over public WiFi.</p>
+<h2 id="advanced-security-crowdsec-ips">Advanced Security: CrowdSec (IPS)</h2>
+<p>Since we bypass Cloudflare's proxy (Orange Cloud) to allow direct
+streaming, the VPS IP address is exposed to the public internet. To
+protect the server against scanners, brute-force attacks, and botnets,
+we implement <strong>CrowdSec</strong>.</p>
+<h3 id="what-is-crowdsec">What is CrowdSec?</h3>
+<p><a href="https://docs.crowdsec.net/u/getting_started/installation/linux/">CrowdSec</a> is a modern, open-source Intrusion Prevention System
+(IPS). Unlike legacy tools like Fail2Ban,
+it works on a collaborative model:</p>
+<ol>
+<li>
+<p><strong>Detect (The Agent):</strong> It analyzes log files (Nginx, SSH, System) in real-time to detect aggressive behavior.</p>
+</li>
+<li>
+<p><strong>Protect (The Bouncer):</strong> Once a threat is detected, the "Bouncer" interacts with the firewall to drop the connection immediately.</p>
+</li>
+<li>
+<p><strong>Share (The Crowd):</strong> When your server blocks an IP for malicious activity, this information is shared with the global CrowdSec community. Conversely, your server automatically receives a blacklist of IPs that have attacked other users, blocking them before they even touch your server.</p>
+</li>
+</ol>
+<h3 id="architecture-setup">Architecture Setup</h3>
+<p>We use a hybrid setup:</p>
+<ul>
+<li>
+<p><strong>The Agent</strong> runs inside a <strong>Docker container</strong>. It reads the logs.</p>
+</li>
+<li>
+<p><strong>The Bouncer</strong> runs directly on the <strong>Host System (VPS)</strong>. It manages the <code>iptables</code> firewall rules.</p>
+</li>
+</ul>
+<h3 id="1-docker-compose-modification-the-agent">1. Docker Compose Modification (The Agent)</h3>
+<p>We modify the <code>docker-compose.yml</code> to add CrowdSec. <strong>Critical Changes:</strong></p>
+<ul>
+<li>
+<p>We map the host's <code>auth.log</code> to protect SSH.</p>
+</li>
+<li>
+<p>We expose Port <code>8080</code> to localhost so the Host-Bouncer can talk to the Docker-Agent.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">app</span><span class="p">:</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;jc21/nginx-proxy-manager:latest&#39;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">      </span><span class="c1"># Public HTTP Port</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;80:80&#39;</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">      </span><span class="c1"># Public HTTPS Port</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;443:443&#39;</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">      </span><span class="c1"># Admin Web Interface (setup only!)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;81:81&#39;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/data</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./letsencrypt:/etc/letsencrypt</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">      </span><span class="nt">DISABLE_IPV6</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crowdsec</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="w">  </span><span class="nt">crowdsec</span><span class="p">:</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crowdsecurity/crowdsec:latest</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a><span class="w">      </span><span class="c1"># load Nginx and SSHD rules</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COLLECTIONS=crowdsecurity/nginx-proxy-manager crowdsecurity/sshd</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="w">      </span><span class="c1"># Nginx logs</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data/logs:/var/log/npm-logs:ro</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="w">      </span><span class="c1"># ssh logs of host to container</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/auth.log:/var/log/host-auth.log:ro</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="w">      </span><span class="c1"># CrowdSec data</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./crowdsec-db:/var/lib/crowdsec/data</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./crowdsec-config:/etc/crowdsec</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a><span class="w">    </span><span class="nt">security_opt</span><span class="p">:</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-new-privileges=true</span>
+</code></pre></div>
+<h3 id="2-log-acquisition-configuration">2. Log Acquisition Configuration</h3>
+<p>CrowdSec needs to know exactly which files to analyze. We create <code>crowdsec-config/acquis.yaml</code> mapping the Nginx logs and the system authentication logs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a># --- Nginx proxy manager logs ---
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>filenames:
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  - /var/log/npm-logs/proxy-host-*_access.log
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  - /var/log/npm-logs/proxy-host-*_error.log
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  - /var/log/npm-logs/fallback_access.log
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  - /var/log/npm-logs/fallback_error.log
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>labels:
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  type: nginx-proxy-manager
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a># --- SSH host logs ---
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>filenames:
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  - /var/log/host-auth.log
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>labels:
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>  type: syslog
+</code></pre></div>
+<p>Apply the changes by restarting the stack:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>restart<span class="w"> </span>crowdsec
+</code></pre></div>
+<h3 id="3-installing-the-enforcer-firewall-bouncer">3. Installing the Enforcer (Firewall Bouncer)</h3>
+<p>The Docker container detects the attacks, but it cannot control the
+host's firewall directly. We install the <code>iptables-bouncer</code> on the VPS host system.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># 1. Add Repository and Install </span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>curl<span class="w"> </span>-s<span class="w"> </span>https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>bash
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>crowdsec-firewall-bouncer-iptables<span class="w"> </span>-y
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1"># 2. Generate API Key (inside Docker) </span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="c1"># The bouncer needs this key to authenticate with the Docker agent </span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-t<span class="w"> </span>nginx-proxy-crowdsec-1<span class="w"> </span>cscli<span class="w"> </span>bouncers<span class="w"> </span>add<span class="w"> </span>firewall-bouncer<span class="w"> </span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># &gt; Copy the API KEY generated here!</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="c1"># 3. Configure Bouncer </span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/crowdsec/bouncers/crowdsec-firewall-bouncer.yaml
+</code></pre></div>
+<p>Edit the configuration file to point to the local Docker port:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>mode: iptables
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>update_frequency: 10s
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>log_mode: file
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>log_dir: /var/log/
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>log_level: info
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a># Point to localhost port 8080 (exposed by Docker)
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>api_url: http://127.0.0.1:8080/
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a># Paste your generated key here
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>api_key: &lt;YOUR_GENERATED_KEY&gt;
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>disable_ipv6: true
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># 4. Enable Protection </span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>crowdsec-firewall-bouncer
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># 5. Verify Status</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Check if the bouncer is registered in the container </span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-t<span class="w"> </span>nginx-proxy-crowdsec-1<span class="w"> </span>cscli<span class="w"> </span>bouncers<span class="w"> </span>list
+</code></pre></div>
+<h3 id="enrollment-verification">Enrollment &amp; Verification</h3>
+<p>By default, a fresh CrowdSec installation has an empty blocklist. To
+immediately receive the full "Community Blocklist" (approx. 20,000+
+malicious IPs) and visualize attacks, we enroll the instance in the
+CrowdSec Console.</p>
+<ol>
+<li>
+<p>Go to <a href="https://app.crowdsec.net">https://app.crowdsec.net</a> and create a free account.</p>
+</li>
+<li>
+<p>Select "Enroll my first instance" to receive an enrollment key.</p>
+</li>
+<li>
+<p>Run the enrollment command inside the Docker container:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Replace &lt;KEY&gt; with the code from the website </span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-t<span class="w"> </span>nginx-proxy-crowdsec-1<span class="w"> </span>cscli<span class="w"> </span>console<span class="w"> </span>enroll<span class="w"> </span>&lt;KEY&gt;
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Restart to force an immediate blocklist update</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>docker<span class="w"> </span>compose<span class="w"> </span>restart<span class="w"> </span>crowdsec
+</code></pre></div>
+<p><strong>Verification:</strong> The download of the global blocklist (CAPI) takes
+about 5-10 minutes. Afterward, verify that your server has protected
+itself against thousands of known bad actors:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Check the number of banned IPs from the Community List </span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-t<span class="w"> </span>nginx-proxy-crowdsec-1<span class="w"> </span>cscli<span class="w"> </span>decisions<span class="w"> </span>list<span class="w"> </span>--origin<span class="w"> </span>CAPI<span class="w"> </span>-a<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;No decisions&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</code></pre></div>
+<p><em>Expected Result:</em> A number greater than <strong>15,000</strong>. If the result is 0
+or 1, wait a few more minutes and try again.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

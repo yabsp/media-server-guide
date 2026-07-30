@@ -3,8 +3,8 @@
 We utilize **MergerFS** to combine multiple physical hard drives into a
 single logical storage pool. Unlike RAID, this allows drives of
 different sizes to be mixed, and data remains readable on the individual
-drives if the pool fails. Speed is a small tradeoff here but should
-absolutely be no problem for what we are planning with our server.
+drives if the pool fails. Speed is a minor tradeoff here, but it should be
+no problem for what we are planning with our server.
 
 ## Prerequisites
 
@@ -63,8 +63,8 @@ sudo blkid
 ```
 
 *Copy the UUID string (without quotes) for the next step. If you are
-doing this in a shell only environment but have a mouse available you
-might wanna use [`gpm`](https://linux.die.net/man/8/gpm) to copy and paste.*
+doing this in a shell-only environment but have a mouse available, you
+might want to use [`gpm`](https://linux.die.net/man/8/gpm) to copy and paste.*
 
 ### Configuring fstab
 

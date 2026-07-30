@@ -116,9 +116,10 @@ iface enp4s0 inet static
 	dns-nameservers 1.1.1.1 8.8.8.8
 ```
 
-- `allow-hotplug`: Tells the system to start the network interface enp4s0 as soon as
-    the kernel detects the hardware is plugged in or available, prevents
-    being stuck at boot as possible with .
+- `allow-hotplug`: Tells the system to start the network interface `enp4s0` as soon
+    as the kernel detects that the hardware is present. This prevents the boot
+    process from hanging while waiting for the interface, which can happen with
+    `auto`.
 
 - `inet`: Use IPv4 (for IPv6 use `inet6`).
 
@@ -130,7 +131,7 @@ Following commands are useful:
 # 1. Find the interface name (e.g., eth0, enp4s0, eno1) 
 ip a
 
-# 2. Find the gateway IP (default via \...) 
+# 2. Find the gateway IP (look for the 'default via ...' line) 
 ip r
 ```
 

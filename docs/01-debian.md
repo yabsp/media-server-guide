@@ -7,7 +7,7 @@
 The goal is a **headless server** to minimize resource usage.
 
 - **OS:** **Debian 13 (Trixie)**, but basically any Linux OS will do here.
-- **GUI:** None (No GNOME/KDE). Terminal only. Optionally you can install a desktop (e.g. GNOME) but deactivate it just in case you need it sometime.
+- **GUI:** None (No GNOME/KDE). Terminal only. Optionally you can install a desktop (e.g. GNOME) but keep it deactivated unless you actually need it.
 
     ```bash
     sudo systemctl set-default multi-user.target

@@ -14,8 +14,8 @@ documentation](https://docs.docker.com/engine/install/debian/).
 
 ### User Permissions
 
-By default, Docker commands require 'sudo'. To fix this, we add our
-admin user to the 'docker' group.
+By default, Docker commands require `sudo`. To fix this, we add our
+admin user to the `docker` group.
 
 ## Directory Structure
 
@@ -281,6 +281,6 @@ docker compose logs -f
 
 ## CasaOS
 
-For convenience purposes we may set up [CasaOS](https://github.com/IceWhaleTech/CasaOS). This is very easy and
-properly described on their github.
+For convenience, we may set up [CasaOS](https://github.com/IceWhaleTech/CasaOS). This is very easy and
+well described on their GitHub.
 

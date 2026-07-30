@@ -40,7 +40,7 @@ sudo chmod 600 /etc/.diskstation_creds
 Add the mount to `/etc/fstab`:
 
 ```conf
-//192.168.x.x/<share> /mnt/docker_backups cifs credentials=/etc/.nas_creds,uid=1000,gid=1000,dir_mode=0755,file_mode=0644,nofail,_netdev,vers=3.0 0 0
+//192.168.x.x/<share> /mnt/docker_backups cifs credentials=/etc/.diskstation_creds,uid=1000,gid=1000,dir_mode=0755,file_mode=0644,nofail,_netdev,vers=3.0 0 0
 ```
 
 Key options:
@@ -150,7 +150,7 @@ Make the script root-owned and executable:
 sudo chown root:root /usr/local/sbin/backup-docker-config.sh
 sudo chmod 755 /usr/local/sbin/backup-docker-config.sh
 ```
-**Note** that alternatively the script can be located in the user's home directory, but better is a root owned directory.
+**Note** that the script can alternatively be located in the user's home directory, but a root-owned directory is preferable.
 
 ## 4. Manual Test
 

@@ -4,7 +4,7 @@
 
 We use a lightweight VPS (1 vCPU, 2GB RAM) running Debian. We utilize
 the hosting provider's hardware firewall instead of a local firewall
-(UFW) as it is easier and there are less possibilities for issues.
+(UFW), as it is easier and leaves fewer opportunities for misconfiguration.
 
 ### IP Forwarding on Linux
 
@@ -45,7 +45,7 @@ sysctl --system
 We are using WireGuard to connect our media server with our VPS. There
 are some guides out there that ease the pain when setting up the whole
 thing - for example [one for Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04) that can be used for other
-versons and distros as well.
+versions and distros as well.
 WireGuard uses asymmetric cryptography. We must generate key pairs
 (Private/Public) on both the VPS and the Home Server.
 
@@ -211,7 +211,7 @@ the VPS by closing the administration port.
 We switch the SSL validation method to "DNS Challenge". This would
 allow us to close Port 80 completely, leaving only the encrypted HTTPS
 port open.
-*Note:* We are using cloudflare here.
+*Note:* We are using Cloudflare here.
 
 ### Cloudflare API Token
 
@@ -224,7 +224,7 @@ port open.
 ### Configure NPM for DNS Challenge
 In Nginx Proxy Manager, edit the Proxy Host:
 
-- **SSL Tab:** Check "Use a DNS Challenges".
+- **SSL Tab:** Check "Use a DNS Challenge".
 
 - **Provider:** Cloudflare.
 

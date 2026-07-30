@@ -6,7 +6,7 @@ low-power states when not in use.
 
 ## Hard Drive Spindown
 
-Mechanical hard drives consume approx. 6--10 Watts when spinning, but
+Mechanical hard drives consume approx. 6–10 Watts when spinning, but
 less than 1 Watt in standby. Since we use **MergerFS** (instead of RAID
 5/ZFS), we have a massive advantage: we can spin down drives
 individually. When watching a movie, only the specific drive containing
@@ -50,7 +50,7 @@ Add a block for **each** mechanical HDD at the end of the file:
 }
 ```
 
-*Note:* A spindown time of 30--60 minutes is recommended. Setting it
+*Note:* A spindown time of 30–60 minutes is recommended. Setting it
 too short (e.g., 5 mins) causes frequent start-stop cycles, which wears
 out the drive mechanics.
 

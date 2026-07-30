@@ -13,6 +13,8 @@ theme:
     - content.code.copy # Adds a "copy" button to your terminal commands!
 
 markdown_extensions:
+  - tables
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -31,3 +33,7 @@ nav:
       - VPS Gateway: 05-vps.md
   - Maintenance:
       - Backups: 07-backups.md
+  - Resources:
+      - Cost Analysis: 08-costs.md
+      - Further Links & Related Guides: 09-further-reading.md
+

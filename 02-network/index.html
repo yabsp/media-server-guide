@@ -937,6 +937,121 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Links & Related Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1366,9 +1481,10 @@ And add:</p>
 </code></pre></div>
 <ul>
 <li>
-<p><code>allow-hotplug</code>: Tells the system to start the network interface enp4s0 as soon as
-    the kernel detects the hardware is plugged in or available, prevents
-    being stuck at boot as possible with .</p>
+<p><code>allow-hotplug</code>: Tells the system to start the network interface <code>enp4s0</code> as soon
+    as the kernel detects that the hardware is present. This prevents the boot
+    process from hanging while waiting for the interface, which can happen with
+    <code>auto</code>.</p>
 </li>
 <li>
 <p><code>inet</code>: Use IPv4 (for IPv6 use <code>inet6</code>).</p>
@@ -1381,7 +1497,7 @@ And add:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Find the interface name (e.g., eth0, enp4s0, eno1) </span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ip<span class="w"> </span>a
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Find the gateway IP (default via \...) </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Find the gateway IP (look for the &#39;default via ...&#39; line) </span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>ip<span class="w"> </span>r
 </code></pre></div>
 <h2 id="language-locale">Language &amp; Locale</h2>

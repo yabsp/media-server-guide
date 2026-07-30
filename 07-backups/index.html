@@ -14,6 +14,8 @@
         <link rel="prev" href="../05-vps/">
       
       
+        <link rel="next" href="../08-costs/">
+      
       
         
       
@@ -740,6 +742,121 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Links & Related Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -902,7 +1019,7 @@ into <code>/etc/fstab</code>.</p>
 </code></pre></div>
 <h3 id="fstab-entry">fstab Entry</h3>
 <p>Add the mount to <code>/etc/fstab</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>//192.168.x.x/&lt;share&gt; /mnt/docker_backups cifs credentials=/etc/.nas_creds,uid=1000,gid=1000,dir_mode=0755,file_mode=0644,nofail,_netdev,vers=3.0 0 0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>//192.168.x.x/&lt;share&gt; /mnt/docker_backups cifs credentials=/etc/.diskstation_creds,uid=1000,gid=1000,dir_mode=0755,file_mode=0644,nofail,_netdev,vers=3.0 0 0
 </code></pre></div>
 <p>Key options:</p>
 <ul>
@@ -1005,7 +1122,7 @@ edit a job that runs as root.</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:root<span class="w"> </span>/usr/local/sbin/backup-docker-config.sh
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/sbin/backup-docker-config.sh
 </code></pre></div>
-<strong>Note</strong> that alternatively the script can be located in the user's home directory, but better is a root owned directory.</p>
+<strong>Note</strong> that the script can alternatively be located in the user's home directory, but a root-owned directory is preferable.</p>
 <h2 id="4-manual-test">4. Manual Test</h2>
 <p>Run the script once by hand before scheduling it:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>/usr/local/sbin/backup-docker-config.sh

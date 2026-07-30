@@ -776,6 +776,121 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Links & Related Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -951,8 +1066,8 @@
 <p>We utilize <strong>MergerFS</strong> to combine multiple physical hard drives into a
 single logical storage pool. Unlike RAID, this allows drives of
 different sizes to be mixed, and data remains readable on the individual
-drives if the pool fails. Speed is a small tradeoff here but should
-absolutely be no problem for what we are planning with our server.</p>
+drives if the pool fails. Speed is a minor tradeoff here, but it should be
+no problem for what we are planning with our server.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>We need the necessary software packages to handle the pool and different
 filesystems (like exFAT for migration).</p>
@@ -994,8 +1109,8 @@ names can change after a reboot. Instead, we use the <strong>UUID</strong>.</p>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>blkid
 </code></pre></div>
 <p><em>Copy the UUID string (without quotes) for the next step. If you are
-doing this in a shell only environment but have a mouse available you
-might wanna use <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a> to copy and paste.</em></p>
+doing this in a shell-only environment but have a mouse available, you
+might want to use <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a> to copy and paste.</em></p>
 <h3 id="configuring-fstab">Configuring fstab</h3>
 <p>We edit <code>/etc/fstab</code> to mount the drives automatically at boot.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Create mount points first </span>

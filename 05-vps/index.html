@@ -909,6 +909,121 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Links & Related Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1217,7 +1332,7 @@
 <h2 id="vps-initial-configuration">VPS Initial Configuration</h2>
 <p>We use a lightweight VPS (1 vCPU, 2GB RAM) running Debian. We utilize
 the hosting provider's hardware firewall instead of a local firewall
-(UFW) as it is easier and there are less possibilities for issues.</p>
+(UFW), as it is easier and leaves fewer opportunities for misconfiguration.</p>
 <h3 id="ip-forwarding-on-linux">IP Forwarding on Linux</h3>
 <p>By default, the Linux kernel acts strictly as a host, not a router. This
 means it instantly drops any network packet that is not specifically
@@ -1253,7 +1368,7 @@ configuration persistence.</p>
 <p>We are using WireGuard to connect our media server with our VPS. There
 are some guides out there that ease the pain when setting up the whole
 thing - for example <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-wireguard-on-ubuntu-20-04">one for Ubuntu 20.04</a> that can be used for other
-versons and distros as well.
+versions and distros as well.
 WireGuard uses asymmetric cryptography. We must generate key pairs
 (Private/Public) on both the VPS and the Home Server.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Run this on BOTH servers to generate keys: </span>
@@ -1407,7 +1522,7 @@ the VPS by closing the administration port.</p>
 <p>We switch the SSL validation method to "DNS Challenge". This would
 allow us to close Port 80 completely, leaving only the encrypted HTTPS
 port open.
-<em>Note:</em> We are using cloudflare here.</p>
+<em>Note:</em> We are using Cloudflare here.</p>
 <h3 id="cloudflare-api-token">Cloudflare API Token</h3>
 <ol>
 <li>
@@ -1424,7 +1539,7 @@ port open.
 <p>In Nginx Proxy Manager, edit the Proxy Host:</p>
 <ul>
 <li>
-<p><strong>SSL Tab:</strong> Check "Use a DNS Challenges".</p>
+<p><strong>SSL Tab:</strong> Check "Use a DNS Challenge".</p>
 </li>
 <li>
 <p><strong>Provider:</strong> Cloudflare.</p>

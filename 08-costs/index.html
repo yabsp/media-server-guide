@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../07-backups/">
       
-        <link rel="next" href="01-debian/">
+      
+        <link rel="next" href="../09-further-reading/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Media Server Guide</title>
+        <title>Cost Analysis - Media Server Guide</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#media-server-guide" class="md-skip">
+        <a href="#cost-analysis-self-hosting-vs-streaming" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href=".." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Cost Analysis
             
           </span>
         </div>
@@ -186,7 +188,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href=".." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -201,37 +203,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -247,70 +222,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-read-the-guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How to read the guide?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arr-apps-and-others" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Arr Apps and others
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-in-progress" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Work in Progress
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#legal-notice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Legal Notice
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -374,7 +285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01-debian/" class="md-nav__link">
+      <a href="../01-debian/" class="md-nav__link">
         
   
   
@@ -402,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02-network/" class="md-nav__link">
+      <a href="../02-network/" class="md-nav__link">
         
   
   
@@ -430,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03-storage/" class="md-nav__link">
+      <a href="../03-storage/" class="md-nav__link">
         
   
   
@@ -458,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06-energy/" class="md-nav__link">
+      <a href="../06-energy/" class="md-nav__link">
         
   
   
@@ -545,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04-docker/" class="md-nav__link">
+      <a href="../04-docker/" class="md-nav__link">
         
   
   
@@ -573,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05-vps/" class="md-nav__link">
+      <a href="../05-vps/" class="md-nav__link">
         
   
   
@@ -660,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07-backups/" class="md-nav__link">
+      <a href="../07-backups/" class="md-nav__link">
         
   
   
@@ -692,8 +603,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -704,11 +617,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -729,7 +642,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -744,10 +657,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="08-costs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -763,6 +703,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#self-hosted-media-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-Hosted Media Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Hosted Media Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time Costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring-monthly-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recurring Monthly Costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streaming-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Alternative
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#break-even-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Break-Even Analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effective-monthly-cost-by-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effective Monthly Cost by Runtime
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Comment
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -775,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="09-further-reading/" class="md-nav__link">
+      <a href="../09-further-reading/" class="md-nav__link">
         
   
   
@@ -830,10 +873,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-read-the-guide" class="md-nav__link">
+  <a href="#self-hosted-media-server" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to read the guide?
+        Self-Hosted Media Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Self-Hosted Media Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#one-time-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One-Time Costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring-monthly-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recurring Monthly Costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streaming-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streaming Alternative
       
     </span>
   </a>
@@ -841,10 +923,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arr-apps-and-others" class="md-nav__link">
+  <a href="#break-even-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arr Apps and others
+        Break-Even Analysis
       
     </span>
   </a>
@@ -852,10 +934,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#work-in-progress" class="md-nav__link">
+  <a href="#effective-monthly-cost-by-runtime" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Work in Progress
+        Effective Monthly Cost by Runtime
       
     </span>
   </a>
@@ -863,10 +945,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#legal-notice" class="md-nav__link">
+  <a href="#additional-comment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Legal Notice
+        Additional Comment
       
     </span>
   </a>
@@ -890,17 +972,199 @@
 
 
 
-<h1 id="media-server-guide">Media Server Guide</h1>
-<p>Setting up a proper Linux server to host a media library can be quite time-consuming — even when using modern tools. This is why I created this guide.</p>
-<h2 id="how-to-read-the-guide">How to read the guide?</h2>
-<p>The guide is structured in chapters and sections. The chapters are in ordered and the order of the chapters and sections within each chapter is exactly the order in which the steps for the setup should be executed.</p>
-<h2 id="arr-apps-and-others">Arr Apps and others</h2>
-<p>Configuration guides for Sonarr, Radarr, Seerr, NZBGet, Unpackerr and Plex in detail are not provided yet. Since user preferences differ for these tools, priority is rather low for these guides — nonetheless this is planned for future updates. Further reading material is provided in <a href="09-further-reading/">Further Links &amp; Related Guides</a>.</p>
-<h2 id="work-in-progress">Work in Progress</h2>
-<p>This documentation is by no means final and can always be improved further.
-Security has been taken into consideration, but there might still be risks and issues with this setup. You are expected to think for yourself about why we do each step and how to do it properly.</p>
-<h2 id="legal-notice">Legal Notice</h2>
-<p>Please keep in mind that downloading copyright protected material is not legal in every region. This guide is specifically written to follow the <a href="09-further-reading/#legal">Federal Law on Copyright and Related Rights</a> of Switzerland.</p>
+<h1 id="cost-analysis-self-hosting-vs-streaming">Cost Analysis: Self-Hosting vs. Streaming</h1>
+<p>Is building and running your own media server actually cheaper than simply
+paying for streaming subscriptions? This chapter documents the real costs of
+this build and compares them against the streaming services that would be
+needed to replace it.</p>
+<p>The reference scenario is a household that wants <strong>up to five people streaming
+simultaneously</strong>. All figures are in <strong>Swiss Francs (CHF)</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Pricing date</p>
+<p>Streaming prices were last verified in <strong>July 2026</strong> using current Swiss
+retail prices. Providers change their plans and prices frequently, so treat
+these numbers as a snapshot rather than a fixed truth.</p>
+</div>
+<h2 id="self-hosted-media-server">Self-Hosted Media Server</h2>
+<h3 id="one-time-costs">One-Time Costs</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost (CHF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2× Seagate IronWolf 12 TB (April 2025)</td>
+<td style="text-align: right;">492.00</td>
+</tr>
+<tr>
+<td>Seagate IronWolf 4 TB (August 2024)</td>
+<td style="text-align: right;">99.00</td>
+</tr>
+<tr>
+<td>DIY media server build (Jan 2026)</td>
+<td style="text-align: right;">577.60</td>
+</tr>
+<tr>
+<td>Plex Pass (Lifetime, December 2024 + trial monthly subs from months before)</td>
+<td style="text-align: right;">108.63</td>
+</tr>
+<tr>
+<td>English indexer</td>
+<td style="text-align: right;">40.00</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1 317.23</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="recurring-monthly-costs">Recurring Monthly Costs</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Cost (CHF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>German indexer (CHF 15/year)</td>
+<td style="text-align: right;">1.25</td>
+</tr>
+<tr>
+<td>Usenet access</td>
+<td style="text-align: right;">5.78</td>
+</tr>
+<tr>
+<td>VPS</td>
+<td style="text-align: right;">3.25</td>
+</tr>
+<tr>
+<td>Electricity (≈ 60 W → 31 kWh × CHF 0.33/kWh) ¹</td>
+<td style="text-align: right;">10.23</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>20.51</strong></td>
+</tr>
+</tbody>
+</table>
+<p>¹ This has been measured over a period of more than a month. During this period the server had few idle time and the measurement can be taken as a worst case estimate.</p>
+<h2 id="streaming-alternative">Streaming Alternative</h2>
+<p>To match the content and the five-simultaneous-stream requirement, the
+following subscriptions would be needed. Netflix and Disney+ only reach five
+concurrent streams by adding a paid <strong>extra member</strong> on top of their four-stream
+Premium plans; the remaining services top out at three to four streams.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Plan (for up to 5 simultaneous streams)</th>
+<th style="text-align: right;">Monthly (CHF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Netflix</td>
+<td>Premium (4 streams) + 1 extra member</td>
+<td style="text-align: right;">30.80</td>
+</tr>
+<tr>
+<td>Disney+</td>
+<td>Premium (4 streams) + 1 extra member</td>
+<td style="text-align: right;">28.80</td>
+</tr>
+<tr>
+<td>Prime Video</td>
+<td>Standard (3 streams)</td>
+<td style="text-align: right;">9.99</td>
+</tr>
+<tr>
+<td>Sky Show</td>
+<td>Premium (4 streams)</td>
+<td style="text-align: right;">17.90 ²</td>
+</tr>
+<tr>
+<td>Paramount+</td>
+<td>Premium (4 streams)</td>
+<td style="text-align: right;">17.90</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>105.39</strong></td>
+</tr>
+</tbody>
+</table>
+<p>² Sky Show Premium drops by CHF 4.00 to <strong>CHF 13.90/month</strong> after the first six
+months, bringing the total down to <strong>CHF 101.39/month</strong> thereafter.</p>
+<h2 id="break-even-analysis">Break-Even Analysis</h2>
+<p>The one-time investment of CHF 1 317.23 pays for itself once the money <em>not</em>
+spent on streaming exceeds the server's own running costs. How long that takes
+depends on how many streaming services the server actually replaces.</p>
+<table>
+<thead>
+<tr>
+<th>Replaced streaming services</th>
+<th style="text-align: right;">Break-even</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Netflix only</td>
+<td style="text-align: right;">≈ 10.7 years</td>
+</tr>
+<tr>
+<td>Netflix + Disney+</td>
+<td style="text-align: right;">≈ 2.8 years</td>
+</tr>
+<tr>
+<td>All five services</td>
+<td style="text-align: right;">≈ 1.3 years</td>
+</tr>
+</tbody>
+</table>
+<p>In other words: if the server merely replaces a single Netflix subscription,
+the savings are marginal. But as a replacement for the full stack of services
+required to satisfy five simultaneous viewers, it pays for itself in a little
+over a year.</p>
+<h2 id="effective-monthly-cost-by-runtime">Effective Monthly Cost by Runtime</h2>
+<p>Amortising the one-time investment over the server's lifetime gives its true
+effective monthly cost (one-time cost spread across the runtime, plus the
+recurring monthly costs). The longer it runs, the cheaper it gets:</p>
+<table>
+<thead>
+<tr>
+<th>Runtime</th>
+<th style="text-align: right;">Effective monthly cost (CHF)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 years</td>
+<td style="text-align: right;">75.39</td>
+</tr>
+<tr>
+<td>3 years</td>
+<td style="text-align: right;">57.10</td>
+</tr>
+<tr>
+<td>5 years</td>
+<td style="text-align: right;">42.46</td>
+</tr>
+<tr>
+<td>7 years</td>
+<td style="text-align: right;">36.19</td>
+</tr>
+</tbody>
+</table>
+<p>Even at a pessimistic two-year lifespan, the effective monthly cost stays below
+the CHF 105.39 streaming bill; over five years it drops to well under half.</p>
+<h2 id="additional-comment">Additional Comment</h2>
+<p>We have to mention here that prices of components and the Plex subscription have changed. The component prices have to be accepted, however the Plex subscription is not needed since there is <a href="https://jellyfin.org/">Jellyfin</a> as an alternative. But what we need to keep in mind is that if you built a server with a good CPU and enough fast Memory there are way more than 5 simultaneous and 4K streams possible as well, these features would all have to be paid additionally when using streaming services. The main invest is your time but once the server is running and automated there is not much for you to do.</p>
 
 
 
@@ -956,10 +1220,10 @@ Security has been taken into consideration, but there might still be risks and i
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

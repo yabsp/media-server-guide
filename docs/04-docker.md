@@ -267,7 +267,7 @@ docker compose up -d
 docker image prune -f
 ```
 
-### Viewing Logs {#viewing-logs .unnumbered}
+### Viewing Logs
 
 If a service isn't starting, check the logs:
 

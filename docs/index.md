@@ -2,6 +2,10 @@
 
 Setting up a proper Linux server to host a media library can be quite time-consuming — even when using modern tools. This is why I created this guide.
 
+## How to Read the Guide?
+
+The guide is structured in chapters and sections. The chapters are ordered and the order of the chapters and sections within each chapter is exactly the order in which the steps for the setup should be executed.
+
 ## Arr Apps and others
 
 Configuration guides for Sonarr, Radarr, Seerr, NZBGet, Unpackerr and Plex in detail are not provided yet. Since user preferences differ for these tools, priority is rather low for these guides — nonetheless this is planned for future updates. Further reading material is provided in [Further Links & Related Guides](09-further-reading.md).

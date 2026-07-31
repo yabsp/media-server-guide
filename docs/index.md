@@ -17,5 +17,5 @@ Security has been taken into consideration, but there might still be risks and i
 
 ## Legal Notice
 
-Please keep in mind that downloading copyright protected material is not legal in every region. This guide is specifically written to follow the [Federal Law on Copyright and Related Rights](09-further-reading.md#legal) of Switzerland.
+Please keep in mind that downloading copyright protected material is not legal in every region. This guide is specifically written to follow the [Federal Act on Copyright and Related Rights](https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en) of Switzerland.
 

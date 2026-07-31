@@ -1,5 +1,6 @@
 site_name: Media Server Guide
 site_author: Yanick Spichty
+site_url: https://yanick.spichty.org/media-server-guide/
 
 theme:
   name: material

@@ -26,7 +26,7 @@ gleichzeitig streamen** möchten. Alle Beträge sind in **Schweizer Franken
 | Media-Server-Eigenbau (Jan. 2026) | 577.60 |
 | Plex Pass (Lifetime, Dezember 2024 + Test-Monatsabos aus den Monaten davor) | 108.63 |
 | Englischer Indexer | 40.00 |
-| **Total** | **1 317.23** |
+| **Total** | **1'317.23** |
 
 ### Wiederkehrende monatliche Kosten
 
@@ -63,7 +63,7 @@ reduziert.
 
 ## Break-Even-Analyse
 
-Die einmalige Investition von CHF 1 317.23 amortisiert sich, sobald das für
+Die einmalige Investition von CHF 1'317.23 amortisiert sich, sobald das für
 Streaming *nicht* ausgegebene Geld die laufenden Kosten des Servers übersteigt.
 Wie lange das dauert, hängt davon ab, wie viele Streaming-Dienste der Server
 tatsächlich ersetzt.

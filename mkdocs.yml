@@ -12,6 +12,39 @@ theme:
     - navigation.top
     - content.code.copy # Adds a "copy" button to your terminal commands!
 
+plugins:
+  # `search` must be listed explicitly once a plugins block exists,
+  # otherwise the default search plugin is disabled.
+  - search
+  - i18n:
+      docs_structure: suffix          # English = base files, German = *.de.md siblings
+      fallback_to_default: true        # missing DE page falls back to EN
+      reconfigure_material: true       # adds the language switcher to the top bar
+      reconfigure_search: true         # separate search index per language
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: de
+          name: Deutsch (Schweiz)
+          build: true
+          nav_translations:
+            Home: Startseite
+            System Setup: Systemeinrichtung
+            Debian Installation: Debian-Installation
+            User & Network: Benutzer & Netzwerk
+            Storage (MergerFS): Speicher (MergerFS)
+            Energy Optimization: Energieoptimierung
+            Containers & Routing: Container & Routing
+            Docker & Services: Docker & Dienste
+            VPS Gateway: VPS-Gateway
+            Maintenance: Wartung
+            Backups: Datensicherung
+            Resources: Ressourcen
+            Cost Analysis: Kostenanalyse
+            Further Links & Related Guides: Weiterführende Links & verwandte Anleitungen
+
 markdown_extensions:
   - tables
   - admonition

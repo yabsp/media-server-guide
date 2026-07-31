@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -18,25 +18,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../02-network/" hreflang="en">
         
-          <link rel="alternate" href="../de/02-network/" hreflang="de">
+          <link rel="alternate" href="./" hreflang="de">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>User & Network - Media Server Guide</title>
+        <title>Benutzer & Netzwerk - Media Server Guide</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#initial-configuration" class="md-skip">
-          Skip to content
+        <a href="#grundkonfiguration" class="md-skip">
+          Zum Inhalt
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              User & Network
+              Benutzer & Netzwerk
             
           </span>
         </div>
@@ -128,20 +128,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../02-network/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../de/02-network/" hreflang="de" class="md-select__link">
+            <a href="./" hreflang="de" class="md-select__link">
               Deutsch (Schweiz)
             </a>
           </li>
@@ -162,16 +162,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Suche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -182,7 +182,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Suche wird initialisiert
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -218,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href="../" title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -236,14 +236,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    Startseite
   
 
     
@@ -288,7 +288,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Systemeinrichtung
   
 
     
@@ -304,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    System Setup
+    Systemeinrichtung
   
 
           </label>
@@ -324,7 +324,7 @@
   <span class="md-ellipsis">
     
   
-    Debian Installation
+    Debian-Installation
   
 
     
@@ -361,7 +361,7 @@
   <span class="md-ellipsis">
     
   
-    User & Network
+    Benutzer & Netzwerk
   
 
     
@@ -379,7 +379,7 @@
   <span class="md-ellipsis">
     
   
-    User & Network
+    Benutzer & Netzwerk
   
 
     
@@ -391,7 +391,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -400,27 +400,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-management" class="md-nav__link">
+  <a href="#benutzerverwaltung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Management
+        Benutzerverwaltung
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Management">
+    <nav class="md-nav" aria-label="Benutzerverwaltung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#verifying-sudo-access" class="md-nav__link">
+  <a href="#sudo-zugriff-uberprufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying Sudo Access
+        Sudo-Zugriff überprüfen
       
     </span>
   </a>
@@ -428,10 +428,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-the-hostname" class="md-nav__link">
+  <a href="#hostnamen-setzen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting the Hostname
+        Hostnamen setzen
       
     </span>
   </a>
@@ -444,22 +444,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dedicated-service-user-setup" class="md-nav__link">
+  <a href="#einrichtung-eines-dedizierten-dienstbenutzers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dedicated Service User Setup
+        Einrichtung eines dedizierten Dienstbenutzers
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dedicated Service User Setup">
+    <nav class="md-nav" aria-label="Einrichtung eines dedizierten Dienstbenutzers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-the-media-user" class="md-nav__link">
+  <a href="#den-media-benutzer-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating the Media User
+        Den Media-Benutzer erstellen
       
     </span>
   </a>
@@ -467,10 +467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#granting-access-to-the-admin-user" class="md-nav__link">
+  <a href="#dem-admin-benutzer-zugriff-gewahren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Granting Access to the Admin User
+        Dem Admin-Benutzer Zugriff gewähren
       
     </span>
   </a>
@@ -478,10 +478,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#applying-filesystem-permissions" class="md-nav__link">
+  <a href="#dateisystem-berechtigungen-anwenden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applying Filesystem Permissions
+        Dateisystem-Berechtigungen anwenden
       
     </span>
   </a>
@@ -489,10 +489,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enforcing-read-only-access-for-plex" class="md-nav__link">
+  <a href="#nur-lese-zugriff-fur-plex-erzwingen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enforcing Read-Only Access for Plex
+        Nur-Lese-Zugriff für Plex erzwingen
       
     </span>
   </a>
@@ -505,10 +505,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-configuration" class="md-nav__link">
+  <a href="#netzwerkkonfiguration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Configuration
+        Netzwerkkonfiguration
       
     </span>
   </a>
@@ -516,10 +516,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#language-locale" class="md-nav__link">
+  <a href="#sprache-gebietsschema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Language &amp; Locale
+        Sprache &amp; Gebietsschema
       
     </span>
   </a>
@@ -530,19 +530,19 @@
   <a href="#ssh-server-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSH Server Installation
+        SSH-Server-Installation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSH Server Installation">
+    <nav class="md-nav" aria-label="SSH-Server-Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-via-apt" class="md-nav__link">
+  <a href="#installation-uber-apt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation via APT
+        Installation über APT
       
     </span>
   </a>
@@ -550,10 +550,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connecting-to-the-server" class="md-nav__link">
+  <a href="#verbindung-zum-server-herstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to the Server
+        Verbindung zum Server herstellen
       
     </span>
   </a>
@@ -566,22 +566,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh-key-authentication-passwordless" class="md-nav__link">
+  <a href="#ssh-schlussel-authentifizierung-passwortlos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSH Key Authentication (Passwordless)
+        SSH-Schlüssel-Authentifizierung (passwortlos)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSH Key Authentication (Passwordless)">
+    <nav class="md-nav" aria-label="SSH-Schlüssel-Authentifizierung (passwortlos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-generating-a-key-pair-on-client" class="md-nav__link">
+  <a href="#1-ein-schlusselpaar-erzeugen-auf-dem-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Generating a Key Pair (On Client)
+        1. Ein Schlüsselpaar erzeugen (auf dem Client)
       
     </span>
   </a>
@@ -589,10 +589,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-copying-the-public-key-to-the-server" class="md-nav__link">
+  <a href="#2-den-offentlichen-schlussel-auf-den-server-kopieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Copying the Public Key to the Server
+        2. Den öffentlichen Schlüssel auf den Server kopieren
       
     </span>
   </a>
@@ -600,10 +600,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-verifying-and-hardening" class="md-nav__link">
+  <a href="#3-uberprufen-und-harten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Verifying and Hardening
+        3. Überprüfen und Härten
       
     </span>
   </a>
@@ -616,22 +616,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#firewall-setup-ufw" class="md-nav__link">
+  <a href="#firewall-einrichtung-ufw" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Firewall Setup (UFW)
+        Firewall-Einrichtung (UFW)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Firewall Setup (UFW)">
+    <nav class="md-nav" aria-label="Firewall-Einrichtung (UFW)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-and-default-policies" class="md-nav__link">
+  <a href="#installation-und-standardrichtlinien" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation and Default Policies
+        Installation und Standardrichtlinien
       
     </span>
   </a>
@@ -639,22 +639,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#defining-rules" class="md-nav__link">
+  <a href="#regeln-definieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Defining Rules
+        Regeln definieren
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Defining Rules">
+    <nav class="md-nav" aria-label="Regeln definieren">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-securing-ssh-crucial" class="md-nav__link">
+  <a href="#1-ssh-absichern-entscheidend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Securing SSH (Crucial)
+        1. SSH absichern (entscheidend)
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-application-ports-pre-configuration" class="md-nav__link">
+  <a href="#2-anwendungs-ports-vorkonfiguration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Application Ports (Pre-Configuration)
+        2. Anwendungs-Ports (Vorkonfiguration)
       
     </span>
   </a>
@@ -678,10 +678,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enabling-the-firewall" class="md-nav__link">
+  <a href="#die-firewall-aktivieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enabling the Firewall
+        Die Firewall aktivieren
       
     </span>
   </a>
@@ -716,7 +716,7 @@
   <span class="md-ellipsis">
     
   
-    Storage (MergerFS)
+    Speicher (MergerFS)
   
 
     
@@ -744,7 +744,7 @@
   <span class="md-ellipsis">
     
   
-    Energy Optimization
+    Energieoptimierung
   
 
     
@@ -795,7 +795,7 @@
   <span class="md-ellipsis">
     
   
-    Containers & Routing
+    Container & Routing
   
 
     
@@ -811,7 +811,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Containers & Routing
+    Container & Routing
   
 
           </label>
@@ -831,7 +831,7 @@
   <span class="md-ellipsis">
     
   
-    Docker & Services
+    Docker & Dienste
   
 
     
@@ -859,7 +859,7 @@
   <span class="md-ellipsis">
     
   
-    VPS Gateway
+    VPS-Gateway
   
 
     
@@ -910,7 +910,7 @@
   <span class="md-ellipsis">
     
   
-    Maintenance
+    Wartung
   
 
     
@@ -926,7 +926,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintenance
+    Wartung
   
 
           </label>
@@ -946,7 +946,7 @@
   <span class="md-ellipsis">
     
   
-    Backups
+    Datensicherung
   
 
     
@@ -997,7 +997,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
+    Ressourcen
   
 
     
@@ -1013,7 +1013,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Resources
+    Ressourcen
   
 
           </label>
@@ -1033,7 +1033,7 @@
   <span class="md-ellipsis">
     
   
-    Cost Analysis
+    Kostenanalyse
   
 
     
@@ -1061,7 +1061,7 @@
   <span class="md-ellipsis">
     
   
-    Further Links & Related Guides
+    Weiterführende Links & verwandte Anleitungen
   
 
     
@@ -1095,7 +1095,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -1104,27 +1104,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#user-management" class="md-nav__link">
+  <a href="#benutzerverwaltung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Management
+        Benutzerverwaltung
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="User Management">
+    <nav class="md-nav" aria-label="Benutzerverwaltung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#verifying-sudo-access" class="md-nav__link">
+  <a href="#sudo-zugriff-uberprufen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying Sudo Access
+        Sudo-Zugriff überprüfen
       
     </span>
   </a>
@@ -1132,10 +1132,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#setting-the-hostname" class="md-nav__link">
+  <a href="#hostnamen-setzen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setting the Hostname
+        Hostnamen setzen
       
     </span>
   </a>
@@ -1148,22 +1148,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dedicated-service-user-setup" class="md-nav__link">
+  <a href="#einrichtung-eines-dedizierten-dienstbenutzers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dedicated Service User Setup
+        Einrichtung eines dedizierten Dienstbenutzers
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Dedicated Service User Setup">
+    <nav class="md-nav" aria-label="Einrichtung eines dedizierten Dienstbenutzers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#creating-the-media-user" class="md-nav__link">
+  <a href="#den-media-benutzer-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating the Media User
+        Den Media-Benutzer erstellen
       
     </span>
   </a>
@@ -1171,10 +1171,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#granting-access-to-the-admin-user" class="md-nav__link">
+  <a href="#dem-admin-benutzer-zugriff-gewahren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Granting Access to the Admin User
+        Dem Admin-Benutzer Zugriff gewähren
       
     </span>
   </a>
@@ -1182,10 +1182,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#applying-filesystem-permissions" class="md-nav__link">
+  <a href="#dateisystem-berechtigungen-anwenden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applying Filesystem Permissions
+        Dateisystem-Berechtigungen anwenden
       
     </span>
   </a>
@@ -1193,10 +1193,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enforcing-read-only-access-for-plex" class="md-nav__link">
+  <a href="#nur-lese-zugriff-fur-plex-erzwingen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enforcing Read-Only Access for Plex
+        Nur-Lese-Zugriff für Plex erzwingen
       
     </span>
   </a>
@@ -1209,10 +1209,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-configuration" class="md-nav__link">
+  <a href="#netzwerkkonfiguration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Configuration
+        Netzwerkkonfiguration
       
     </span>
   </a>
@@ -1220,10 +1220,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#language-locale" class="md-nav__link">
+  <a href="#sprache-gebietsschema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Language &amp; Locale
+        Sprache &amp; Gebietsschema
       
     </span>
   </a>
@@ -1234,19 +1234,19 @@
   <a href="#ssh-server-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSH Server Installation
+        SSH-Server-Installation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSH Server Installation">
+    <nav class="md-nav" aria-label="SSH-Server-Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-via-apt" class="md-nav__link">
+  <a href="#installation-uber-apt" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation via APT
+        Installation über APT
       
     </span>
   </a>
@@ -1254,10 +1254,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#connecting-to-the-server" class="md-nav__link">
+  <a href="#verbindung-zum-server-herstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connecting to the Server
+        Verbindung zum Server herstellen
       
     </span>
   </a>
@@ -1270,22 +1270,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh-key-authentication-passwordless" class="md-nav__link">
+  <a href="#ssh-schlussel-authentifizierung-passwortlos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SSH Key Authentication (Passwordless)
+        SSH-Schlüssel-Authentifizierung (passwortlos)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SSH Key Authentication (Passwordless)">
+    <nav class="md-nav" aria-label="SSH-Schlüssel-Authentifizierung (passwortlos)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-generating-a-key-pair-on-client" class="md-nav__link">
+  <a href="#1-ein-schlusselpaar-erzeugen-auf-dem-client" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Generating a Key Pair (On Client)
+        1. Ein Schlüsselpaar erzeugen (auf dem Client)
       
     </span>
   </a>
@@ -1293,10 +1293,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-copying-the-public-key-to-the-server" class="md-nav__link">
+  <a href="#2-den-offentlichen-schlussel-auf-den-server-kopieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Copying the Public Key to the Server
+        2. Den öffentlichen Schlüssel auf den Server kopieren
       
     </span>
   </a>
@@ -1304,10 +1304,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-verifying-and-hardening" class="md-nav__link">
+  <a href="#3-uberprufen-und-harten" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Verifying and Hardening
+        3. Überprüfen und Härten
       
     </span>
   </a>
@@ -1320,22 +1320,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#firewall-setup-ufw" class="md-nav__link">
+  <a href="#firewall-einrichtung-ufw" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Firewall Setup (UFW)
+        Firewall-Einrichtung (UFW)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Firewall Setup (UFW)">
+    <nav class="md-nav" aria-label="Firewall-Einrichtung (UFW)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-and-default-policies" class="md-nav__link">
+  <a href="#installation-und-standardrichtlinien" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation and Default Policies
+        Installation und Standardrichtlinien
       
     </span>
   </a>
@@ -1343,22 +1343,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#defining-rules" class="md-nav__link">
+  <a href="#regeln-definieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Defining Rules
+        Regeln definieren
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Defining Rules">
+    <nav class="md-nav" aria-label="Regeln definieren">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-securing-ssh-crucial" class="md-nav__link">
+  <a href="#1-ssh-absichern-entscheidend" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Securing SSH (Crucial)
+        1. SSH absichern (entscheidend)
       
     </span>
   </a>
@@ -1366,10 +1366,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-application-ports-pre-configuration" class="md-nav__link">
+  <a href="#2-anwendungs-ports-vorkonfiguration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Application Ports (Pre-Configuration)
+        2. Anwendungs-Ports (Vorkonfiguration)
       
     </span>
   </a>
@@ -1382,10 +1382,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enabling-the-firewall" class="md-nav__link">
+  <a href="#die-firewall-aktivieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enabling the Firewall
+        Die Firewall aktivieren
       
     </span>
   </a>
@@ -1414,35 +1414,35 @@
 
 
 
-<h1 id="initial-configuration">Initial Configuration</h1>
-<h2 id="user-management">User Management</h2>
-<p>Since we skipped the root password, our created user (let's call him <code>joachim</code> or
-similar) has sudo rights.</p>
-<h3 id="verifying-sudo-access">Verifying Sudo Access</h3>
-<p>To verify that the user can perform administrative tasks:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Check if user belongs to sudo group </span>
+<h1 id="grundkonfiguration">Grundkonfiguration</h1>
+<h2 id="benutzerverwaltung">Benutzerverwaltung</h2>
+<p>Da wir das Root-Passwort übersprungen haben, verfügt unser erstellter Benutzer
+(nennen wir ihn <code>joachim</code> oder ähnlich) über Sudo-Rechte.</p>
+<h3 id="sudo-zugriff-uberprufen">Sudo-Zugriff überprüfen</h3>
+<p>Um zu überprüfen, ob der Benutzer administrative Aufgaben ausführen kann:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Prüfen, ob der Benutzer zur sudo-Gruppe gehört </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>groups
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Test sudo access (should ask for user password) </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Sudo-Zugriff testen (sollte nach dem Benutzerpasswort fragen) </span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
 </code></pre></div>
-<h3 id="setting-the-hostname">Setting the Hostname</h3>
-<p>To ensure the server is easily identifiable on the network:</p>
+<h3 id="hostnamen-setzen">Hostnamen setzen</h3>
+<p>Damit der Server im Netzwerk leicht identifizierbar ist:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>mediaserver
 </code></pre></div>
-<h2 id="dedicated-service-user-setup">Dedicated Service User Setup</h2>
-<p>For security and clean permission management, we do not run the
-applications as the administrative user. Instead, we create a dedicated
-system user (named <code>media</code>) for all Docker containers.</p>
-<h3 id="creating-the-media-user">Creating the Media User</h3>
-<p>We create a system user with a specific UID and disable login
-capabilities for security.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Create user &#39;media&#39; with UID 13000, create matching group, no login, no home</span>
+<h2 id="einrichtung-eines-dedizierten-dienstbenutzers">Einrichtung eines dedizierten Dienstbenutzers</h2>
+<p>Aus Sicherheitsgründen und für eine saubere Rechteverwaltung führen wir die
+Anwendungen nicht als administrativer Benutzer aus. Stattdessen erstellen wir
+einen dedizierten Systembenutzer (namens <code>media</code>) für alle Docker-Container.</p>
+<h3 id="den-media-benutzer-erstellen">Den Media-Benutzer erstellen</h3>
+<p>Wir erstellen einen Systembenutzer mit einer bestimmten UID und deaktivieren aus
+Sicherheitsgründen die Anmeldemöglichkeit.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Benutzer &#39;media&#39; mit UID 13000 erstellen, passende Gruppe, kein Login, kein Home</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-u<span class="w"> </span><span class="m">13000</span><span class="w"> </span>-U<span class="w"> </span>-M<span class="w"> </span>-s<span class="w"> </span>/bin/false<span class="w"> </span>media
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Verify creation</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Erstellung überprüfen</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>id<span class="w"> </span>media
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Output: uid=13000(media) gid=13000(media) groups=13000(media)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># Ausgabe: uid=13000(media) gid=13000(media) groups=13000(media)</span>
 </code></pre></div>
 <ul>
 <li>
@@ -1452,55 +1452,55 @@ capabilities for security.</p>
 <p><strong>PGID:</strong> 13000</p>
 </li>
 <li>
-<p><code>-U</code>: Creates a group with the same name and ID.</p>
+<p><code>-U</code>: Erstellt eine Gruppe mit demselben Namen und derselben ID.</p>
 </li>
 <li>
-<p><code>-M</code>: Do not create a home directory.</p>
+<p><code>-M</code>: Kein Home-Verzeichnis erstellen.</p>
 </li>
 <li>
-<p><code>-s /bin/false</code>: Disable login.</p>
+<p><code>-s /bin/false</code>: Anmeldung deaktivieren.</p>
 </li>
 </ul>
-<h3 id="granting-access-to-the-admin-user">Granting Access to the Admin User</h3>
-<p>To ensure that we (the logged-in admin) can still manually manage files
-in the storage pool, we add our current user to the new group.</p>
+<h3 id="dem-admin-benutzer-zugriff-gewahren">Dem Admin-Benutzer Zugriff gewähren</h3>
+<p>Damit wir (der angemeldete Admin) weiterhin Dateien im Speicherpool manuell
+verwalten können, fügen wir unseren aktuellen Benutzer der neuen Gruppe hinzu.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>media<span class="w"> </span>joachim
 </code></pre></div>
-<h3 id="applying-filesystem-permissions">Applying Filesystem Permissions</h3>
-<p>We transfer ownership of the data directory to the new user and group.
-We set permissions to <code>775</code>, allowing full access to both the service user
-and group members (us).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Change ownership to media:media </span>
+<h3 id="dateisystem-berechtigungen-anwenden">Dateisystem-Berechtigungen anwenden</h3>
+<p>Wir übertragen die Eigentümerschaft des Datenverzeichnisses auf den neuen
+Benutzer und die neue Gruppe. Wir setzen die Berechtigungen auf <code>775</code>, was
+sowohl dem Dienstbenutzer als auch den Gruppenmitgliedern (uns) vollen Zugriff
+gewährt.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Eigentümerschaft auf media:media ändern </span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>media:media<span class="w"> </span>/mnt/data
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Set permissions (User=RWX, Group=RWX, Others=RX) </span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Berechtigungen setzen (User=RWX, Group=RWX, Others=RX) </span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">775</span><span class="w"> </span>/mnt/data/
 </code></pre></div>
 <p><em>NB: r = 4, w = 2, x = 1</em></p>
-<h3 id="enforcing-read-only-access-for-plex">Enforcing Read-Only Access for Plex</h3>
-<p>While services like Sonarr need write access to manage files, Plex
-should not modify media files.</p>
-<p>Instead of complex filesystem ACLs, we will handle this at the Docker
-level later.</p>
+<h3 id="nur-lese-zugriff-fur-plex-erzwingen">Nur-Lese-Zugriff für Plex erzwingen</h3>
+<p>Während Dienste wie Sonarr Schreibzugriff benötigen, um Dateien zu verwalten,
+sollte Plex keine Mediendateien verändern.</p>
+<p>Anstatt komplexer Dateisystem-ACLs regeln wir dies später auf Docker-Ebene.</p>
 <ul>
 <li>
-<p>All containers run as <code>PUID=13000</code>.</p>
+<p>Alle Container laufen als <code>PUID=13000</code>.</p>
 </li>
 <li>
-<p>Sonarr/Radarr mount volumes as <strong>Read-Write</strong>.</p>
+<p>Sonarr/Radarr binden Volumes als <strong>Lese-Schreib</strong> ein.</p>
 </li>
 <li>
-<p>Plex mounts the media volume with the <code>:ro</code> (Read-Only) flag in Docker
-    Compose (see <a href="../04-docker/">Docker &amp; Services</a>).</p>
+<p>Plex bindet das Medien-Volume mit dem <code>:ro</code>-Flag (Read-Only) in Docker
+    Compose ein (siehe <a href="../04-docker/">Docker &amp; Dienste</a>).</p>
 </li>
 </ul>
-<h2 id="network-configuration">Network Configuration</h2>
-<p>Since this is a server, it needs a static IP. In my case I added the
-following interface:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Edit the file /etc/network/interfaces</span>
+<h2 id="netzwerkkonfiguration">Netzwerkkonfiguration</h2>
+<p>Da es sich um einen Server handelt, benötigt er eine statische IP. In meinem
+Fall habe ich die folgende Schnittstelle hinzugefügt:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Die Datei /etc/network/interfaces bearbeiten</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/network/interfaces
 </code></pre></div>
-And add:</p>
+Und füge hinzu:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># The primary network interface
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>allow-hotplug enp4s0
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>iface enp4s0 inet static
@@ -1511,78 +1511,80 @@ And add:</p>
 </code></pre></div>
 <ul>
 <li>
-<p><code>allow-hotplug</code>: Tells the system to start the network interface <code>enp4s0</code> as soon
-    as the kernel detects that the hardware is present. This prevents the boot
-    process from hanging while waiting for the interface, which can happen with
-    <code>auto</code>.</p>
+<p><code>allow-hotplug</code>: Weist das System an, die Netzwerkschnittstelle <code>enp4s0</code> zu
+    starten, sobald der Kernel erkennt, dass die Hardware vorhanden ist. Das
+    verhindert, dass der Bootvorgang beim Warten auf die Schnittstelle hängen
+    bleibt, wie es mit <code>auto</code> passieren kann.</p>
 </li>
 <li>
-<p><code>inet</code>: Use IPv4 (for IPv6 use <code>inet6</code>).</p>
+<p><code>inet</code>: IPv4 verwenden (für IPv6 <code>inet6</code> verwenden).</p>
 </li>
 <li>
-<p><code>gateway</code>: IP address of the router.</p>
+<p><code>gateway</code>: IP-Adresse des Routers.</p>
 </li>
 </ul>
-<p>Following commands are useful:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Find the interface name (e.g., eth0, enp4s0, eno1) </span>
+<p>Folgende Befehle sind nützlich:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 1. Den Schnittstellennamen finden (z. B. eth0, enp4s0, eno1) </span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ip<span class="w"> </span>a
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Find the gateway IP (look for the &#39;default via ...&#39; line) </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 2. Die Gateway-IP finden (achte auf die Zeile &#39;default via ...&#39;) </span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>ip<span class="w"> </span>r
 </code></pre></div>
-<h2 id="language-locale">Language &amp; Locale</h2>
-<p>We set the system language to English but kept the keyboard layout Swiss
-(or German) as I am using a Swiss keyboard.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Reconfigure Locales (Set to en_US.UTF-8)</span>
+<h2 id="sprache-gebietsschema">Sprache &amp; Gebietsschema</h2>
+<p>Wir haben die Systemsprache auf Englisch gesetzt, aber das Tastaturlayout auf
+Schweizerdeutsch (oder Deutsch) belassen, da ich eine Schweizer Tastatur
+verwende.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Locales neu konfigurieren (auf en_US.UTF-8 setzen)</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>dpkg-reconfigure<span class="w"> </span>locales
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Check Keyboard layout (Should be &#39;ch&#39; or &#39;de&#39;) </span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Tastaturlayout prüfen (sollte &#39;ch&#39; oder &#39;de&#39; sein) </span>
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>cat<span class="w"> </span>/etc/default/keyboard
 </code></pre></div>
-<h2 id="ssh-server-installation">SSH Server Installation</h2>
-<p>If the SSH server was not selected during the initial OS installation,
-it must be installed manually.</p>
-<h3 id="installation-via-apt">Installation via APT</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 1. Install the package </span>
+<h2 id="ssh-server-installation">SSH-Server-Installation</h2>
+<p>Falls der SSH-Server bei der ersten Betriebssysteminstallation nicht ausgewählt
+wurde, muss er manuell installiert werden.</p>
+<h3 id="installation-uber-apt">Installation über APT</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 1. Das Paket installieren </span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-server
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># 2. Enable and start the service </span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># 2. Den Dienst aktivieren und starten </span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>ssh
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># 3. Verify the status </span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># 3. Den Status überprüfen </span>
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>ssh
 </code></pre></div>
-<h3 id="connecting-to-the-server">Connecting to the Server</h3>
-<p>From a remote machine (Windows PowerShell or Linux Terminal):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Syntax: ssh username@ip-address </span>
+<h3 id="verbindung-zum-server-herstellen">Verbindung zum Server herstellen</h3>
+<p>Von einem entfernten Rechner (Windows PowerShell oder Linux-Terminal):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Syntax: ssh benutzername@ip-adresse </span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ssh<span class="w"> </span>user@192.168.0.50
 </code></pre></div>
-<h2 id="ssh-key-authentication-passwordless">SSH Key Authentication (Passwordless)</h2>
-<p>To increase security and convenience, we configure SSH Key
-Authentication. This allows logging in without typing a password, using
-a cryptographic key pair instead.</p>
-<h3 id="1-generating-a-key-pair-on-client">1. Generating a Key Pair (On Client)</h3>
-<p><strong>Note:</strong> These commands are to be executed on your <strong>Laptop/PC</strong>. We
-use the <code>ed25519</code> algorithm.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Run this on your local machine </span>
+<h2 id="ssh-schlussel-authentifizierung-passwortlos">SSH-Schlüssel-Authentifizierung (passwortlos)</h2>
+<p>Um Sicherheit und Komfort zu erhöhen, konfigurieren wir die
+SSH-Schlüssel-Authentifizierung. Diese erlaubt die Anmeldung ohne Eingabe eines
+Passworts, indem stattdessen ein kryptografisches Schlüsselpaar verwendet wird.</p>
+<h3 id="1-ein-schlusselpaar-erzeugen-auf-dem-client">1. Ein Schlüsselpaar erzeugen (auf dem Client)</h3>
+<p><strong>Hinweis:</strong> Diese Befehle sind auf deinem <strong>Laptop/PC</strong> auszuführen. Wir
+verwenden den <code>ed25519</code>-Algorithmus.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Führe dies auf deinem lokalen Rechner aus </span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;my-laptop&quot;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Press Enter to accept the default file location.</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Drücke Enter, um den Standard-Speicherort zu übernehmen.</span>
 </code></pre></div>
-<h3 id="2-copying-the-public-key-to-the-server">2. Copying the Public Key to the Server</h3>
-<p>We transfer the public part of the key to the server using <code>ssh-copy-id</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Replace user and IP with your server details </span>
+<h3 id="2-den-offentlichen-schlussel-auf-den-server-kopieren">2. Den öffentlichen Schlüssel auf den Server kopieren</h3>
+<p>Wir übertragen den öffentlichen Teil des Schlüssels mit <code>ssh-copy-id</code> auf den
+Server.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Ersetze Benutzer und IP durch deine Serverdaten </span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span>user@192.168.0.50
 </code></pre></div>
-<h3 id="3-verifying-and-hardening">3. Verifying and Hardening</h3>
-<p>Try to log in again. You should not be asked for a password. Once
-verified, we disable password authentication to prevent brute-force
-attacks.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Open the SSH config on the SERVER </span>
+<h3 id="3-uberprufen-und-harten">3. Überprüfen und Härten</h3>
+<p>Versuche, dich erneut anzumelden. Du solltest nicht nach einem Passwort gefragt
+werden. Sobald dies bestätigt ist, deaktivieren wir die Passwort-Authentifizierung,
+um Brute-Force-Angriffe zu verhindern.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Öffne die SSH-Konfiguration auf dem SERVER </span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/ssh/sshd_config
 </code></pre></div>
-<p>Find and modify the following lines:</p>
+<p>Suche und ändere die folgenden Zeilen:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a># Disable root login (Security Best Practice)
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>PermitRootLogin no
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
@@ -1591,50 +1593,50 @@ attacks.</p>
 <a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>ChallengeResponseAuthentication no 
 <a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>UsePAM yes
 </code></pre></div>
-<p>Restart SSH to apply:</p>
+<p>Starte SSH neu, um die Änderungen anzuwenden:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
 </code></pre></div>
-<h2 id="firewall-setup-ufw">Firewall Setup (UFW)</h2>
-<p>To secure the host system, we use <strong>UFW</strong> (Uncomplicated Firewall).
-While Docker manages its own network rules deeply in the system
-(iptables), UFW is essential to protect the host services (like SSH) and
-serves as a second layer of defense.</p>
-<h3 id="installation-and-default-policies">Installation and Default Policies</h3>
-<p>First, we install UFW and define the fundamental behavior: block all
-incoming traffic by default, but allow all outgoing traffic (so the
-server can download updates).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Install UFW sudo apt update </span>
+<h2 id="firewall-einrichtung-ufw">Firewall-Einrichtung (UFW)</h2>
+<p>Um das Host-System abzusichern, verwenden wir <strong>UFW</strong> (Uncomplicated Firewall).
+Obwohl Docker seine eigenen Netzwerkregeln tief im System verwaltet (iptables),
+ist UFW unverzichtbar, um die Host-Dienste (wie SSH) zu schützen, und dient als
+zweite Verteidigungsebene.</p>
+<h3 id="installation-und-standardrichtlinien">Installation und Standardrichtlinien</h3>
+<p>Zuerst installieren wir UFW und definieren das grundlegende Verhalten:
+standardmässig sämtlichen eingehenden Verkehr blockieren, aber allen
+ausgehenden Verkehr erlauben (damit der Server Updates herunterladen kann).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># UFW installieren sudo apt update </span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ufw
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Set defaults (Do not enable yet) </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># Standards setzen (noch nicht aktivieren) </span>
 <a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>deny<span class="w"> </span>incoming<span class="w"> </span>
 <a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>default<span class="w"> </span>allow<span class="w"> </span>outgoing
 </code></pre></div>
-<h3 id="defining-rules">Defining Rules</h3>
-<p>We distinguish between critical system access (SSH) and application
-access (Plex, Web interfaces).</p>
-<h4 id="1-securing-ssh-crucial">1. Securing SSH (Crucial)</h4>
-<p>We limit SSH access strictly to the local home network (LAN). This
-prevents anyone from the outside internet from even trying to log in,
-even if they had the key.</p>
-<p><strong>Note:</strong> Replace <code>192.168.0.0/24</code> with your actual subnet.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Allow SSH only from local LAN </span>
+<h3 id="regeln-definieren">Regeln definieren</h3>
+<p>Wir unterscheiden zwischen kritischem Systemzugriff (SSH) und Anwendungszugriff
+(Plex, Weboberflächen).</p>
+<h4 id="1-ssh-absichern-entscheidend">1. SSH absichern (entscheidend)</h4>
+<p>Wir beschränken den SSH-Zugriff strikt auf das lokale Heimnetzwerk (LAN). Das
+verhindert, dass jemand aus dem offenen Internet überhaupt versucht, sich
+anzumelden – selbst wenn er den Schlüssel hätte.</p>
+<p><strong>Hinweis:</strong> Ersetze <code>192.168.0.0/24</code> durch dein tatsächliches Subnetz.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># SSH nur aus dem lokalen LAN erlauben </span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">22</span><span class="w"> </span>proto<span class="w"> </span>tcp
 </code></pre></div>
-<h4 id="2-application-ports-pre-configuration">2. Application Ports (Pre-Configuration)</h4>
-<p>Although we haven't installed Docker yet, we will pre-configure the
-firewall for the planned services.</p>
-<p><strong>Public Access (Internet &amp; LAN):</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Plex (Streaming) - Standard Port 32400 </span>
+<h4 id="2-anwendungs-ports-vorkonfiguration">2. Anwendungs-Ports (Vorkonfiguration)</h4>
+<p>Obwohl wir Docker noch nicht installiert haben, konfigurieren wir die Firewall
+für die geplanten Dienste vor.</p>
+<p><strong>Öffentlicher Zugriff (Internet &amp; LAN):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Plex (Streaming) - Standard-Port 32400 </span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">32400</span>/tcp
 </code></pre></div>
-<p><strong>Private Admin Access (LAN Only):</strong> Management interfaces like Sonarr,
-Radarr, or Portainer should not be exposed to the open internet. We
-restrict them to the local network.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># CasaOS / Dashboard (Port 80), only if you want to use this</span>
+<p><strong>Privater Admin-Zugriff (nur LAN):</strong> Verwaltungsoberflächen wie Sonarr,
+Radarr oder Portainer sollten nicht im offenen Internet exponiert werden. Wir
+beschränken sie auf das lokale Netzwerk.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># CasaOS / Dashboard (Port 80), nur falls du dies verwenden möchtest</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">80</span><span class="w"> </span>proto<span class="w"> </span>tcp
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># Overseerr/Seerr (Request Management - Port 5055) </span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># Overseerr/Seerr (Anfragenverwaltung - Port 5055) </span>
 <a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">5055</span><span class="w"> </span>proto<span class="w"> </span>tcp
 <a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
 <a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1"># Sonarr (8989) &amp; Radarr (7878) </span>
@@ -1644,14 +1646,18 @@ restrict them to the local network.</p>
 <a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="c1"># NZBGet / SABnzbd (6789) </span>
 <a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.0.0/24<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">6789</span><span class="w"> </span>proto<span class="w"> </span>tcp
 </code></pre></div>
-<p><strong>Note</strong>: Since we are using Docker to deploy these tools, we don't strictly need these UFW rules; by default Docker manipulates <code>iptables</code> directly and bypasses UFW. They are listed here for completeness and for any services you run directly on the host.</p>
-<h3 id="enabling-the-firewall">Enabling the Firewall</h3>
-<p><strong>Warning:</strong> Ensure the SSH rule (Section <a href="./#ssh-server-installation">SSH Server Installation</a>) matches your current IP
-address, or you might lock yourself out immediately.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Enable UFW </span>
+<p><strong>Hinweis</strong>: Da wir diese Werkzeuge mit Docker bereitstellen, benötigen wir
+diese UFW-Regeln streng genommen nicht; Docker manipuliert <code>iptables</code>
+standardmässig direkt und umgeht UFW. Sie sind hier der Vollständigkeit halber
+aufgeführt sowie für Dienste, die du direkt auf dem Host betreibst.</p>
+<h3 id="die-firewall-aktivieren">Die Firewall aktivieren</h3>
+<p><strong>Warnung:</strong> Stelle sicher, dass die SSH-Regel (Abschnitt <a href="./#ssh-server-installation">SSH-Server-Installation</a>)
+zu deiner aktuellen IP-Adresse passt, sonst sperrst du dich womöglich sofort
+selbst aus.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># UFW aktivieren </span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Check status and numbered rules</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Status und nummerierte Regeln prüfen</span>
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>sudo<span class="w"> </span>ufw<span class="w"> </span>status<span class="w"> </span>numbered
 </code></pre></div>
 
@@ -1677,7 +1683,7 @@ address, or you might lock yourself out immediately.</p>
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Zurück zum Seitenanfang
 </button>
         
       </main>
@@ -1709,10 +1715,10 @@ address, or you might lock yourself out immediately.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

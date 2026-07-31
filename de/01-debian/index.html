@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -11,32 +11,32 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../">
       
       
         <link rel="next" href="../02-network/">
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../01-debian/" hreflang="en">
         
-          <link rel="alternate" href="../de/01-debian/" hreflang="de">
+          <link rel="alternate" href="./" hreflang="de">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Debian Installation - Media Server Guide</title>
+        <title>Debian-Installation - Media Server Guide</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#base-system-installation" class="md-skip">
-          Skip to content
+        <a href="#basissystem-installation" class="md-skip">
+          Zum Inhalt
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debian Installation
+              Debian-Installation
             
           </span>
         </div>
@@ -128,20 +128,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../01-debian/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../de/01-debian/" hreflang="de" class="md-select__link">
+            <a href="./" hreflang="de" class="md-select__link">
               Deutsch (Schweiz)
             </a>
           </li>
@@ -162,16 +162,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Suche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -182,7 +182,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Suche wird initialisiert
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -218,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href="../" title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -236,14 +236,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    Startseite
   
 
     
@@ -288,7 +288,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Systemeinrichtung
   
 
     
@@ -304,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    System Setup
+    Systemeinrichtung
   
 
           </label>
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Debian Installation
+    Debian-Installation
   
 
     
@@ -351,7 +351,7 @@
   <span class="md-ellipsis">
     
   
-    Debian Installation
+    Debian-Installation
   
 
     
@@ -363,7 +363,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -372,27 +372,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system-setup" class="md-nav__link">
+  <a href="#einrichtung-des-betriebssystems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operating System Setup
+        Einrichtung des Betriebssystems
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Operating System Setup">
+    <nav class="md-nav" aria-label="Einrichtung des Betriebssystems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-philosophy" class="md-nav__link">
+  <a href="#installationsphilosophie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation Philosophy
+        Installationsphilosophie
       
     </span>
   </a>
@@ -400,10 +400,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#root-password-strategy" class="md-nav__link">
+  <a href="#strategie-fur-das-root-passwort" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Root" Password Strategy
+        Strategie für das «Root»-Passwort
       
     </span>
   </a>
@@ -411,10 +411,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#software-selection" class="md-nav__link">
+  <a href="#softwareauswahl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software Selection
+        Softwareauswahl
       
     </span>
   </a>
@@ -449,7 +449,7 @@
   <span class="md-ellipsis">
     
   
-    User & Network
+    Benutzer & Netzwerk
   
 
     
@@ -477,7 +477,7 @@
   <span class="md-ellipsis">
     
   
-    Storage (MergerFS)
+    Speicher (MergerFS)
   
 
     
@@ -505,7 +505,7 @@
   <span class="md-ellipsis">
     
   
-    Energy Optimization
+    Energieoptimierung
   
 
     
@@ -556,7 +556,7 @@
   <span class="md-ellipsis">
     
   
-    Containers & Routing
+    Container & Routing
   
 
     
@@ -572,7 +572,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Containers & Routing
+    Container & Routing
   
 
           </label>
@@ -592,7 +592,7 @@
   <span class="md-ellipsis">
     
   
-    Docker & Services
+    Docker & Dienste
   
 
     
@@ -620,7 +620,7 @@
   <span class="md-ellipsis">
     
   
-    VPS Gateway
+    VPS-Gateway
   
 
     
@@ -671,7 +671,7 @@
   <span class="md-ellipsis">
     
   
-    Maintenance
+    Wartung
   
 
     
@@ -687,7 +687,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintenance
+    Wartung
   
 
           </label>
@@ -707,7 +707,7 @@
   <span class="md-ellipsis">
     
   
-    Backups
+    Datensicherung
   
 
     
@@ -758,7 +758,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
+    Ressourcen
   
 
     
@@ -774,7 +774,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Resources
+    Ressourcen
   
 
           </label>
@@ -794,7 +794,7 @@
   <span class="md-ellipsis">
     
   
-    Cost Analysis
+    Kostenanalyse
   
 
     
@@ -822,7 +822,7 @@
   <span class="md-ellipsis">
     
   
-    Further Links & Related Guides
+    Weiterführende Links & verwandte Anleitungen
   
 
     
@@ -856,7 +856,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -865,27 +865,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#operating-system-setup" class="md-nav__link">
+  <a href="#einrichtung-des-betriebssystems" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operating System Setup
+        Einrichtung des Betriebssystems
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Operating System Setup">
+    <nav class="md-nav" aria-label="Einrichtung des Betriebssystems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installation-philosophy" class="md-nav__link">
+  <a href="#installationsphilosophie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation Philosophy
+        Installationsphilosophie
       
     </span>
   </a>
@@ -893,10 +893,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#root-password-strategy" class="md-nav__link">
+  <a href="#strategie-fur-das-root-passwort" class="md-nav__link">
     <span class="md-ellipsis">
       
-        "Root" Password Strategy
+        Strategie für das «Root»-Passwort
       
     </span>
   </a>
@@ -904,10 +904,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#software-selection" class="md-nav__link">
+  <a href="#softwareauswahl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Software Selection
+        Softwareauswahl
       
     </span>
   </a>
@@ -936,32 +936,32 @@
 
 
 
-<h1 id="base-system-installation">Base System Installation</h1>
-<h2 id="operating-system-setup">Operating System Setup</h2>
-<h3 id="installation-philosophy">Installation Philosophy</h3>
-<p>The goal is a <strong>headless server</strong> to minimize resource usage.</p>
+<h1 id="basissystem-installation">Basissystem-Installation</h1>
+<h2 id="einrichtung-des-betriebssystems">Einrichtung des Betriebssystems</h2>
+<h3 id="installationsphilosophie">Installationsphilosophie</h3>
+<p>Das Ziel ist ein <strong>Headless-Server</strong>, um den Ressourcenverbrauch zu minimieren.</p>
 <ul>
-<li><strong>OS:</strong> <strong>Debian 13 (Trixie)</strong>, but basically any Linux OS will do here.</li>
+<li><strong>Betriebssystem:</strong> <strong>Debian 13 (Trixie)</strong>, aber grundsätzlich eignet sich hier jedes Linux-Betriebssystem.</li>
 <li>
-<p><strong>GUI:</strong> None (No GNOME/KDE). Terminal only. Optionally you can install a desktop (e.g. GNOME) but keep it deactivated unless you actually need it.</p>
+<p><strong>GUI:</strong> Keine (kein GNOME/KDE). Nur Terminal. Optional kannst du eine Desktop-Umgebung (z. B. GNOME) installieren, sie aber deaktiviert lassen, sofern du sie nicht wirklich brauchst.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>set-default<span class="w"> </span>multi-user.target
 </code></pre></div>
 </li>
 <li>
-<p><strong>Filesystem:</strong> ext4.</p>
+<p><strong>Dateisystem:</strong> ext4.</p>
 </li>
 </ul>
-<h3 id="root-password-strategy">"Root" Password Strategy</h3>
-<p>During the installation process, Debian asks for a <code>root</code> password.</p>
+<h3 id="strategie-fur-das-root-passwort">Strategie für das «Root»-Passwort</h3>
+<p>Während des Installationsprozesses fragt Debian nach einem <code>root</code>-Passwort.</p>
 <ul>
-<li><strong>Action:</strong> We leave the root password field empty.</li>
-<li><strong>Reasoning:</strong> This forces Debian to disable the direct root account login and automatically adds the primary user to the <code>sudo</code> group. This is easier and arguably safer than having a user with the same password as root.</li>
+<li><strong>Vorgehen:</strong> Wir lassen das Feld für das Root-Passwort leer.</li>
+<li><strong>Begründung:</strong> Dadurch deaktiviert Debian die direkte Anmeldung über das Root-Konto und fügt den primären Benutzer automatisch der <code>sudo</code>-Gruppe hinzu. Das ist einfacher und wohl auch sicherer, als einen Benutzer mit demselben Passwort wie Root zu haben.</li>
 </ul>
-<h3 id="software-selection">Software Selection</h3>
-<p>In the <em>tasksel</em> menu (blue screen near the end), we select:</p>
+<h3 id="softwareauswahl">Softwareauswahl</h3>
+<p>Im <em>tasksel</em>-Menü (blauer Bildschirm gegen Ende) wählen wir:</p>
 <ol>
-<li>SSH Server (Crucial for remote access), if you did not select this refer to <a href="../02-network/#ssh-server-installation">User &amp; Network</a> for the SSH server installation.</li>
-<li>Standard System Utilities</li>
+<li>SSH-Server (entscheidend für den Fernzugriff); falls du dies nicht ausgewählt hast, findest du unter <a href="../02-network/#ssh-server-installation">Benutzer &amp; Netzwerk</a> die Installation des SSH-Servers.</li>
+<li>Standard-Systemwerkzeuge</li>
 </ol>
 
 
@@ -986,7 +986,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Zurück zum Seitenanfang
 </button>
         
       </main>
@@ -1018,10 +1018,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

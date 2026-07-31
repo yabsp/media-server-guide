@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="de" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -18,25 +18,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../03-storage/" hreflang="en">
         
-          <link rel="alternate" href="../de/03-storage/" hreflang="de">
+          <link rel="alternate" href="./" hreflang="de">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
     
     
       
-        <title>Storage (MergerFS) - Media Server Guide</title>
+        <title>Speicher (MergerFS) - Media Server Guide</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +55,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#storage-setup-mergerfs" class="md-skip">
-          Skip to content
+        <a href="#speichereinrichtung-mergerfs" class="md-skip">
+          Zum Inhalt
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Storage (MergerFS)
+              Speicher (MergerFS)
             
           </span>
         </div>
@@ -128,20 +128,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../03-storage/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../de/03-storage/" hreflang="de" class="md-select__link">
+            <a href="./" hreflang="de" class="md-select__link">
               Deutsch (Schweiz)
             </a>
           </li>
@@ -162,16 +162,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Suche">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -182,7 +182,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Suche wird initialisiert
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -218,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href="../" title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -236,14 +236,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Home
+    Startseite
   
 
     
@@ -288,7 +288,7 @@
   <span class="md-ellipsis">
     
   
-    System Setup
+    Systemeinrichtung
   
 
     
@@ -304,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    System Setup
+    Systemeinrichtung
   
 
           </label>
@@ -324,7 +324,7 @@
   <span class="md-ellipsis">
     
   
-    Debian Installation
+    Debian-Installation
   
 
     
@@ -352,7 +352,7 @@
   <span class="md-ellipsis">
     
   
-    User & Network
+    Benutzer & Netzwerk
   
 
     
@@ -389,7 +389,7 @@
   <span class="md-ellipsis">
     
   
-    Storage (MergerFS)
+    Speicher (MergerFS)
   
 
     
@@ -407,7 +407,7 @@
   <span class="md-ellipsis">
     
   
-    Storage (MergerFS)
+    Speicher (MergerFS)
   
 
     
@@ -419,7 +419,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -428,15 +428,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#voraussetzungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Voraussetzungen
       
     </span>
   </a>
@@ -444,22 +444,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-preparation" class="md-nav__link">
+  <a href="#festplattenvorbereitung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Disk Preparation
+        Festplattenvorbereitung
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Disk Preparation">
+    <nav class="md-nav" aria-label="Festplattenvorbereitung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identifying-drives" class="md-nav__link">
+  <a href="#laufwerke-identifizieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identifying Drives
+        Laufwerke identifizieren
       
     </span>
   </a>
@@ -467,10 +467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#formatting-to-ext4" class="md-nav__link">
+  <a href="#formatieren-auf-ext4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Formatting to ext4
+        Formatieren auf ext4
       
     </span>
   </a>
@@ -483,22 +483,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mounting-drives" class="md-nav__link">
+  <a href="#laufwerke-einhangen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mounting Drives
+        Laufwerke einhängen
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mounting Drives">
+    <nav class="md-nav" aria-label="Laufwerke einhängen">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getting-the-uuid" class="md-nav__link">
+  <a href="#die-uuid-ermitteln" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting the UUID
+        Die UUID ermitteln
       
     </span>
   </a>
@@ -506,10 +506,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-fstab" class="md-nav__link">
+  <a href="#fstab-konfigurieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring fstab
+        fstab konfigurieren
       
     </span>
   </a>
@@ -522,22 +522,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-mergerfs-pool" class="md-nav__link">
+  <a href="#der-mergerfs-pool" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The MergerFS Pool
+        Der MergerFS-Pool
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The MergerFS Pool">
+    <nav class="md-nav" aria-label="Der MergerFS-Pool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#understanding-the-mergerfs-arguments" class="md-nav__link">
+  <a href="#die-mergerfs-argumente-verstehen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the MergerFS Arguments
+        Die MergerFS-Argumente verstehen
       
     </span>
   </a>
@@ -550,10 +550,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applying-changes" class="md-nav__link">
+  <a href="#anderungen-anwenden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applying Changes
+        Änderungen anwenden
       
     </span>
   </a>
@@ -583,7 +583,7 @@
   <span class="md-ellipsis">
     
   
-    Energy Optimization
+    Energieoptimierung
   
 
     
@@ -634,7 +634,7 @@
   <span class="md-ellipsis">
     
   
-    Containers & Routing
+    Container & Routing
   
 
     
@@ -650,7 +650,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Containers & Routing
+    Container & Routing
   
 
           </label>
@@ -670,7 +670,7 @@
   <span class="md-ellipsis">
     
   
-    Docker & Services
+    Docker & Dienste
   
 
     
@@ -698,7 +698,7 @@
   <span class="md-ellipsis">
     
   
-    VPS Gateway
+    VPS-Gateway
   
 
     
@@ -749,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    Maintenance
+    Wartung
   
 
     
@@ -765,7 +765,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Maintenance
+    Wartung
   
 
           </label>
@@ -785,7 +785,7 @@
   <span class="md-ellipsis">
     
   
-    Backups
+    Datensicherung
   
 
     
@@ -836,7 +836,7 @@
   <span class="md-ellipsis">
     
   
-    Resources
+    Ressourcen
   
 
     
@@ -852,7 +852,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Resources
+    Ressourcen
   
 
           </label>
@@ -872,7 +872,7 @@
   <span class="md-ellipsis">
     
   
-    Cost Analysis
+    Kostenanalyse
   
 
     
@@ -900,7 +900,7 @@
   <span class="md-ellipsis">
     
   
-    Further Links & Related Guides
+    Weiterführende Links & verwandte Anleitungen
   
 
     
@@ -934,7 +934,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
   
   
   
@@ -943,15 +943,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Inhaltsverzeichnis
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#voraussetzungen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Voraussetzungen
       
     </span>
   </a>
@@ -959,22 +959,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disk-preparation" class="md-nav__link">
+  <a href="#festplattenvorbereitung" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Disk Preparation
+        Festplattenvorbereitung
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Disk Preparation">
+    <nav class="md-nav" aria-label="Festplattenvorbereitung">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identifying-drives" class="md-nav__link">
+  <a href="#laufwerke-identifizieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identifying Drives
+        Laufwerke identifizieren
       
     </span>
   </a>
@@ -982,10 +982,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#formatting-to-ext4" class="md-nav__link">
+  <a href="#formatieren-auf-ext4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Formatting to ext4
+        Formatieren auf ext4
       
     </span>
   </a>
@@ -998,22 +998,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mounting-drives" class="md-nav__link">
+  <a href="#laufwerke-einhangen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mounting Drives
+        Laufwerke einhängen
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Mounting Drives">
+    <nav class="md-nav" aria-label="Laufwerke einhängen">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#getting-the-uuid" class="md-nav__link">
+  <a href="#die-uuid-ermitteln" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Getting the UUID
+        Die UUID ermitteln
       
     </span>
   </a>
@@ -1021,10 +1021,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#configuring-fstab" class="md-nav__link">
+  <a href="#fstab-konfigurieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuring fstab
+        fstab konfigurieren
       
     </span>
   </a>
@@ -1037,22 +1037,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-mergerfs-pool" class="md-nav__link">
+  <a href="#der-mergerfs-pool" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The MergerFS Pool
+        Der MergerFS-Pool
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The MergerFS Pool">
+    <nav class="md-nav" aria-label="Der MergerFS-Pool">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#understanding-the-mergerfs-arguments" class="md-nav__link">
+  <a href="#die-mergerfs-argumente-verstehen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understanding the MergerFS Arguments
+        Die MergerFS-Argumente verstehen
       
     </span>
   </a>
@@ -1065,10 +1065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#applying-changes" class="md-nav__link">
+  <a href="#anderungen-anwenden" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Applying Changes
+        Änderungen anwenden
       
     </span>
   </a>
@@ -1092,117 +1092,127 @@
 
 
 
-<h1 id="storage-setup-mergerfs">Storage Setup (MergerFS)</h1>
-<p>We utilize <strong>MergerFS</strong> to combine multiple physical hard drives into a
-single logical storage pool. Unlike RAID, this allows drives of
-different sizes to be mixed, and data remains readable on the individual
-drives if the pool fails. Speed is a minor tradeoff here, but it should be
-no problem for what we are planning with our server.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>We need the necessary software packages to handle the pool and different
-filesystems (like exFAT for migration).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Install MergerFS and filesystem tools </span>
+<h1 id="speichereinrichtung-mergerfs">Speichereinrichtung (MergerFS)</h1>
+<p>Wir nutzen <strong>MergerFS</strong>, um mehrere physische Festplatten zu einem einzigen
+logischen Speicherpool zusammenzufassen. Anders als bei RAID können hier
+Festplatten unterschiedlicher Grösse gemischt werden, und die Daten bleiben auf
+den einzelnen Festplatten lesbar, falls der Pool ausfällt. Die Geschwindigkeit
+ist hier ein kleiner Kompromiss, sollte aber für das, was wir mit unserem Server
+vorhaben, kein Problem sein.</p>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+<p>Wir benötigen die nötigen Softwarepakete, um den Pool und verschiedene
+Dateisysteme (wie exFAT für die Migration) zu handhaben.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># MergerFS und Dateisystem-Werkzeuge installieren </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mergerfs<span class="w"> </span>fuse3<span class="w"> </span>exfatprogs
 </code></pre></div>
-<h2 id="disk-preparation">Disk Preparation</h2>
-<h3 id="identifying-drives">Identifying Drives</h3>
-<p>Before formatting, we must identify the correct device identifiers
-(e.g., <code>/dev/sda</code>, <code>/dev/sdb</code>).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># List block devices and their file systems </span>
+<h2 id="festplattenvorbereitung">Festplattenvorbereitung</h2>
+<h3 id="laufwerke-identifizieren">Laufwerke identifizieren</h3>
+<p>Vor dem Formatieren müssen wir die korrekten Gerätebezeichner identifizieren
+(z. B. <code>/dev/sda</code>, <code>/dev/sdb</code>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Blockgeräte und ihre Dateisysteme auflisten </span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>lsblk<span class="w"> </span>-f
 </code></pre></div>
-<h3 id="formatting-to-ext4">Formatting to ext4</h3>
-<p>Linux works best with the <code>ext4</code> filesystem. When preparing a new drive for
-media storage, we use specific flags to maximize usable space.</p>
-<p><strong>Warning:</strong> This command wipes all data on the target drive!</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Format the drive (Replace sdX with actual identifier)</span>
+<h3 id="formatieren-auf-ext4">Formatieren auf ext4</h3>
+<p>Linux funktioniert am besten mit dem <code>ext4</code>-Dateisystem. Wenn wir ein neues
+Laufwerk für die Medienspeicherung vorbereiten, verwenden wir bestimmte Flags,
+um den nutzbaren Speicherplatz zu maximieren.</p>
+<p><strong>Warnung:</strong> Dieser Befehl löscht alle Daten auf dem Ziellaufwerk!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Das Laufwerk formatieren (sdX durch den tatsächlichen Bezeichner ersetzen)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>mkfs.ext4<span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span>-L<span class="w"> </span>disk1<span class="w"> </span>/dev/sdX
 </code></pre></div>
-<p><strong>Parameter Explanation:</strong></p>
+<p><strong>Erklärung der Parameter:</strong></p>
 <ul>
 <li>
-<p><code>-m 0</code>: By default, ext4 reserves 5% of the disk space for the root
-    user/system services. On a 10TB drive, this would waste 500GB. Since
-    this is a data drive, we set the reserved blocks to 0%.</p>
+<p><code>-m 0</code>: Standardmässig reserviert ext4 5 % des Speicherplatzes für den
+    Root-Benutzer / für Systemdienste. Bei einem 10-TB-Laufwerk würde das 500 GB
+    verschwenden. Da dies ein Datenlaufwerk ist, setzen wir die reservierten
+    Blöcke auf 0 %.</p>
 </li>
 <li>
-<p><code>-L label</code>: Assigns a label (name) to the partition, making it easier to
-    identify later.</p>
+<p><code>-L label</code>: Weist der Partition ein Label (einen Namen) zu, was die spätere
+    Identifikation erleichtert.</p>
 </li>
 </ul>
-<h2 id="mounting-drives">Mounting Drives</h2>
-<p>We do not mount drives using their device name (e.g., <code>/dev/sdb</code>) because these
-names can change after a reboot. Instead, we use the <strong>UUID</strong>.</p>
-<h3 id="getting-the-uuid">Getting the UUID</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Display UUIDs for all partitions </span>
+<h2 id="laufwerke-einhangen">Laufwerke einhängen</h2>
+<p>Wir hängen Laufwerke nicht über ihren Gerätenamen ein (z. B. <code>/dev/sdb</code>), da
+sich diese Namen nach einem Neustart ändern können. Stattdessen verwenden wir
+die <strong>UUID</strong>.</p>
+<h3 id="die-uuid-ermitteln">Die UUID ermitteln</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># UUIDs aller Partitionen anzeigen </span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>blkid
 </code></pre></div>
-<p><em>Copy the UUID string (without quotes) for the next step. If you are
-doing this in a shell-only environment but have a mouse available, you
-might want to use <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a> to copy and paste.</em></p>
-<h3 id="configuring-fstab">Configuring fstab</h3>
-<p>We edit <code>/etc/fstab</code> to mount the drives automatically at boot.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Create mount points first </span>
+<p><em>Kopiere die UUID-Zeichenkette (ohne Anführungszeichen) für den nächsten
+Schritt. Wenn du dies in einer reinen Shell-Umgebung machst, aber eine Maus zur
+Verfügung hast, möchtest du vielleicht <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a>
+zum Kopieren und Einfügen verwenden.</em></p>
+<h3 id="fstab-konfigurieren">fstab konfigurieren</h3>
+<p>Wir bearbeiten <code>/etc/fstab</code>, um die Laufwerke beim Booten automatisch
+einzuhängen.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Zuerst die Einhängepunkte erstellen </span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/disk1<span class="w"> </span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/disk2
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Edit the file system table </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># Die Dateisystemtabelle bearbeiten </span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/etc/fstab
 </code></pre></div>
-<p>Add the following lines for the physical disks:</p>
+<p>Füge die folgenden Zeilen für die physischen Festplatten hinzu:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># Physical Disk 1 
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx /mnt/disk1 ext4 defaults 0 2
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># Physical Disk 2 
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>UUID=yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy /mnt/disk2 ext4 defaults 0 2
 </code></pre></div>
-<h2 id="the-mergerfs-pool">The MergerFS Pool</h2>
-<p>Finally, we define the virtual pool that combines <code>/mnt/disk1</code>, <code>/mnt/disk2</code>, etc., into <code>/mnt/data</code>.</p>
-<p>Add this line to the end of <code>/etc/fstab</code>:</p>
+<h2 id="der-mergerfs-pool">Der MergerFS-Pool</h2>
+<p>Zum Schluss definieren wir den virtuellen Pool, der <code>/mnt/disk1</code>, <code>/mnt/disk2</code>
+usw. zu <code>/mnt/data</code> zusammenfasst.</p>
+<p>Füge diese Zeile am Ende von <code>/etc/fstab</code> hinzu:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># MergerFS Pool
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a># Syntax: branches mount_point type options dump pass 
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>/mnt/disk* /mnt/data fuse.mergerfs defaults,nonempty,allow_other,use_ino,category.create=mfs,minfreespace=10G,fsname=mergerfs 0 0
 </code></pre></div>
-<h3 id="understanding-the-mergerfs-arguments">Understanding the MergerFS Arguments</h3>
+<h3 id="die-mergerfs-argumente-verstehen">Die MergerFS-Argumente verstehen</h3>
 <ul>
 <li>
-<p><code>/mnt/disk*</code>: The source. The asterisk (*) tells MergerFS to include <strong>any</strong>
-    folder starting with "disk" in that directory. This makes adding
-    new drives (disk3, disk4) easy later.</p>
+<p><code>/mnt/disk*</code>: Die Quelle. Der Stern (*) weist MergerFS an, <strong>jeden</strong> Ordner
+    in diesem Verzeichnis einzubeziehen, der mit «disk» beginnt. Das erleichtert
+    das spätere Hinzufügen neuer Laufwerke (disk3, disk4).</p>
 </li>
 <li>
-<p><code>defaults</code>: Standard mount settings.</p>
+<p><code>defaults</code>: Standard-Einhängeeinstellungen.</p>
 </li>
 <li>
-<p><code>allow_other</code>: <strong>Crucial for Docker.</strong> Allows users other than the one who
-    mounted the filesystem (root) to access it. Without this, Plex would
-    not see the files.</p>
+<p><code>allow_other</code>: <strong>Entscheidend für Docker.</strong> Erlaubt anderen Benutzern als dem,
+    der das Dateisystem eingehängt hat (root), den Zugriff. Ohne dies würde Plex
+    die Dateien nicht sehen.</p>
 </li>
 <li>
-<p><code>use_ino</code>: Passes the original inode numbers from the physical disks.
-    Important for hardlinks to work correctly across the pool.</p>
+<p><code>use_ino</code>: Übergibt die ursprünglichen Inode-Nummern der physischen
+    Festplatten. Wichtig, damit Hardlinks über den Pool hinweg korrekt
+    funktionieren.</p>
 </li>
 <li>
-<p><code>category.create=mfs</code>: <strong>"Most Free Space"</strong>. When a new file is written to the pool,
-    MergerFS will write it to the physical disk that has the most
-    available space. This keeps drive usage balanced.</p>
+<p><code>category.create=mfs</code>: <strong>«Most Free Space»</strong> (am meisten freier Speicher).
+    Wird eine neue Datei in den Pool geschrieben, schreibt MergerFS sie auf die
+    physische Festplatte mit dem meisten verfügbaren Speicherplatz. Das hält die
+    Laufwerksauslastung ausgeglichen.</p>
 </li>
 <li>
-<p><code>minfreespace=10G</code>: Prevents a drive from becoming 100% full, which can cause
-    filesystem corruption or crashes. If a drive has less than 10GB
-    left, MergerFS moves to the next drive.</p>
+<p><code>minfreespace=10G</code>: Verhindert, dass eine Festplatte zu 100 % voll wird, was
+    zu Dateisystemkorruption oder Abstürzen führen kann. Hat eine Festplatte
+    weniger als 10 GB übrig, wechselt MergerFS zur nächsten.</p>
 </li>
 </ul>
-<h2 id="applying-changes">Applying Changes</h2>
-<p>Once <code>fstab</code> is saved, create the pool directory and mount everything.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Create the pool mount point </span>
+<h2 id="anderungen-anwenden">Änderungen anwenden</h2>
+<p>Sobald <code>fstab</code> gespeichert ist, erstelle das Pool-Verzeichnis und hänge alles
+ein.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Den Pool-Einhängepunkt erstellen </span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/data
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Mount all filesystems listed in fstab </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Alle in fstab aufgeführten Dateisysteme einhängen </span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>sudo<span class="w"> </span>mount<span class="w"> </span>-a
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Verify the pool size (Should be sum of disk1 + disk2) </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Die Pool-Grösse überprüfen (sollte die Summe aus disk1 + disk2 sein) </span>
 <a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>df<span class="w"> </span>-h<span class="w"> </span>/mnt/data
 </code></pre></div>
 
@@ -1228,7 +1238,7 @@ might want to use <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a>
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  Zurück zum Seitenanfang
 </button>
         
       </main>
@@ -1260,10 +1270,10 @@ might want to use <a href="https://linux.die.net/man/8/gpm"><code>gpm</code></a>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

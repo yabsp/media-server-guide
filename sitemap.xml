@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/"/>
     </url>
     <url>
-        <loc>None01-debian/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/01-debian/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None01-debian/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/01-debian/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/01-debian/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/01-debian/"/>
     </url>
     <url>
-        <loc>None02-network/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/02-network/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None02-network/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/02-network/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/02-network/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/02-network/"/>
     </url>
     <url>
-        <loc>None03-storage/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/03-storage/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None03-storage/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/03-storage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/03-storage/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/03-storage/"/>
     </url>
     <url>
-        <loc>None04-docker/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/04-docker/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None04-docker/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/04-docker/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/04-docker/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/04-docker/"/>
     </url>
     <url>
-        <loc>None05-vps/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/05-vps/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None05-vps/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/05-vps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/05-vps/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/05-vps/"/>
     </url>
     <url>
-        <loc>None06-energy/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/06-energy/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None06-energy/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/06-energy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/06-energy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/06-energy/"/>
     </url>
     <url>
-        <loc>None07-backups/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/07-backups/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None07-backups/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/07-backups/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/07-backups/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/07-backups/"/>
     </url>
     <url>
-        <loc>None08-costs/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/08-costs/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None08-costs/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/08-costs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/08-costs/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/08-costs/"/>
     </url>
     <url>
-        <loc>None09-further-reading/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/09-further-reading/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None09-further-reading/"/>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/09-further-reading/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/09-further-reading/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/09-further-reading/"/>
     </url>
     <url>
-        <loc>Nonede/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/"/>
     </url>
     <url>
-        <loc>Nonede/01-debian/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/01-debian/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/01-debian/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None01-debian/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/01-debian/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/01-debian/"/>
     </url>
     <url>
-        <loc>Nonede/02-network/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/02-network/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/02-network/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None02-network/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/02-network/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/02-network/"/>
     </url>
     <url>
-        <loc>Nonede/03-storage/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/03-storage/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/03-storage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None03-storage/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/03-storage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/03-storage/"/>
     </url>
     <url>
-        <loc>Nonede/04-docker/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/04-docker/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/04-docker/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None04-docker/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/04-docker/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/04-docker/"/>
     </url>
     <url>
-        <loc>Nonede/05-vps/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/05-vps/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/05-vps/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None05-vps/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/05-vps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/05-vps/"/>
     </url>
     <url>
-        <loc>Nonede/06-energy/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/06-energy/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/06-energy/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None06-energy/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/06-energy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/06-energy/"/>
     </url>
     <url>
-        <loc>Nonede/07-backups/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/07-backups/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/07-backups/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None07-backups/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/07-backups/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/07-backups/"/>
     </url>
     <url>
-        <loc>Nonede/08-costs/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/08-costs/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/08-costs/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None08-costs/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/08-costs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/08-costs/"/>
     </url>
     <url>
-        <loc>Nonede/09-further-reading/</loc>
+        <loc>https://yanick.spichty.org/media-server-guide/de/09-further-reading/</loc>
         <lastmod>2026-07-31</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="de" href="Nonede/09-further-reading/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None09-further-reading/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/09-further-reading/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/09-further-reading/"/>
     </url>
 </urlset>

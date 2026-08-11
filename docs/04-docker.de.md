@@ -141,6 +141,42 @@ services:
     restart: unless-stopped
 
   # ==========================================
+  # BAZARR HD
+  # ==========================================
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=13000
+      - PGID=13000
+      - TZ=Europe/Zurich
+    volumes:
+      - ~/docker/config/bazarr:/config
+      - /mnt/data/media/movies_hd:/movies
+      - /mnt/data/media/tv_hd:/tv
+    ports:
+      - 6767:6767
+    restart: unless-stopped
+ 
+  # ==========================================
+  # BAZARR 4K
+  # ==========================================
+  bazarr4k:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr4k
+    environment:
+      - PUID=13000
+      - PGID=13000
+      - TZ=Europe/Zurich
+    volumes:
+      - ~/docker/config/bazarr4k:/config
+      - /mnt/data/media/movies_4k:/movies
+      - /mnt/data/media/tv_4k:/tv
+    ports:
+      - 6768:6767
+    restart: unless-stopped
+
+  # ==========================================
   # SEERR
   # ==========================================
   seerr:

@@ -30,6 +30,7 @@ Reference material for the *Arr* ecosystem and the tools that glue it together.
     — Automatically extracts archived downloads for the *Arr* apps.
 - [Bazarr (LinuxServer.io)](https://docs.linuxserver.io/images/docker-bazarr/#usage)
     — Companion app that manages subtitles for Sonarr and Radarr libraries.
+- [Bazarr Setup](https://wiki.bazarr.media/Getting-Started/Setup-Guide/)
 
 ## Plex
 

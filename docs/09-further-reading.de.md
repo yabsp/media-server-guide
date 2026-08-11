@@ -34,6 +34,8 @@ zusammenhalten.
     — Entpackt archivierte Downloads für die *Arr*-Apps automatisch.
 - [Bazarr (LinuxServer.io)](https://docs.linuxserver.io/images/docker-bazarr/#usage)
     — Begleit-App, die Untertitel für Sonarr- und Radarr-Bibliotheken verwaltet.
+- [Bazarr Setup](https://wiki.bazarr.media/Getting-Started/Setup-Guide/)
+
 
 ## Plex
 

@@ -5,17 +5,15 @@ site_url: https://yanick.spichty.org/media-server-guide/
 theme:
   name: material
   palette:
-    scheme: slate # Gives it a sleek, dark terminal aesthetic
+    scheme: slate
     primary: blue grey
     accent: light blue
   features:
     - navigation.sections
     - navigation.top
-    - content.code.copy # Adds a "copy" button to your terminal commands!
+    - content.code.copy
 
 plugins:
-  # `search` must be listed explicitly once a plugins block exists,
-  # otherwise the default search plugin is disabled.
   - search
   - i18n:
       docs_structure: suffix          # English = base files, German = *.de.md siblings
@@ -45,6 +43,9 @@ plugins:
             Resources: Ressourcen
             Cost Analysis: Kostenanalyse
             Further Links & Related Guides: Weiterführende Links & verwandte Anleitungen
+
+extra:
+  generator: false
 
 markdown_extensions:
   - tables

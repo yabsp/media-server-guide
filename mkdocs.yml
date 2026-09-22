@@ -40,6 +40,7 @@ plugins:
             VPS Gateway: VPS-Gateway
             Maintenance: Wartung
             Backups: Datensicherung
+            Updates: Aktualisierungen
             Resources: Ressourcen
             Cost Analysis: Kostenanalyse
             Further Links & Related Guides: Weiterführende Links & verwandte Anleitungen
@@ -68,6 +69,7 @@ nav:
       - VPS Gateway: 05-vps.md
   - Maintenance:
       - Backups: 07-backups.md
+      - Updates: 10-updates.md
   - Resources:
       - Cost Analysis: 08-costs.md
       - Further Links & Related Guides: 09-further-reading.md

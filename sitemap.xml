@@ -2,142 +2,156 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/01-debian/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/01-debian/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/01-debian/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/02-network/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/02-network/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/02-network/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/03-storage/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/03-storage/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/03-storage/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/04-docker/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/04-docker/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/04-docker/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/05-vps/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/05-vps/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/05-vps/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/06-energy/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/06-energy/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/06-energy/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/07-backups/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/07-backups/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/07-backups/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/08-costs/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/08-costs/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/08-costs/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/09-further-reading/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/09-further-reading/"/>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/09-further-reading/"/>
     </url>
     <url>
+        <loc>https://yanick.spichty.org/media-server-guide/10-updates/</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/10-updates/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/10-updates/"/>
+    </url>
+    <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/01-debian/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/01-debian/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/01-debian/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/02-network/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/02-network/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/02-network/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/03-storage/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/03-storage/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/03-storage/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/04-docker/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/04-docker/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/04-docker/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/05-vps/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/05-vps/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/05-vps/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/06-energy/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/06-energy/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/06-energy/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/07-backups/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/07-backups/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/07-backups/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/08-costs/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/08-costs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/08-costs/"/>
     </url>
     <url>
         <loc>https://yanick.spichty.org/media-server-guide/de/09-further-reading/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/09-further-reading/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/09-further-reading/"/>
+    </url>
+    <url>
+        <loc>https://yanick.spichty.org/media-server-guide/de/10-updates/</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="https://yanick.spichty.org/media-server-guide/de/10-updates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://yanick.spichty.org/media-server-guide/10-updates/"/>
     </url>
 </urlset>

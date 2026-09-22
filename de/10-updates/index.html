@@ -1,0 +1,1312 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Yanick Spichty">
+      
+      
+        <link rel="canonical" href="https://yanick.spichty.org/media-server-guide/de/10-updates/">
+      
+      
+        <link rel="prev" href="../07-backups/">
+      
+      
+        <link rel="next" href="../08-costs/">
+      
+      
+        
+          <link rel="alternate" href="../../10-updates/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Aktualisierungen - Media Server Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aktualisierungen" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Media Server Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Aktualisierungen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../10-updates/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch (Schweiz)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Media Server Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemeinrichtung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systemeinrichtung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian-Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benutzer & Netzwerk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Speicher (MergerFS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energieoptimierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Container & Routing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Container & Routing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker & Dienste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-vps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS-Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wartung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wartung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datensicherung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aktualisierungen
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aktualisierungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-warum-zwei-skripte-und-zwei-crontabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Warum zwei Skripte und zwei Crontabs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-das-apt-skript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Das apt-Skript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-das-docker-skript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Das Docker-Skript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-manueller-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Manueller Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mit-cron-einplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mit Cron einplanen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ressourcen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ressourcen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kostenanalyse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weiterführende Links & verwandte Anleitungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-warum-zwei-skripte-und-zwei-crontabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Warum zwei Skripte und zwei Crontabs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-das-apt-skript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Das apt-Skript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-das-docker-skript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Das Docker-Skript
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-manueller-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Manueller Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mit-cron-einplanen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mit Cron einplanen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hinweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Hinweise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aktualisierungen">Aktualisierungen</h1>
+<p>Der Server hat zwei Teile, die unabhängig voneinander altern: das
+Debian-Basissystem und die Container-Images. Beide werden über Cron
+aktualisiert, können sich aber keinen gemeinsamen Job teilen — der
+apt-Teil benötigt root, und der Docker-Teil darf <strong>nicht</strong> als root
+laufen.</p>
+<h2 id="1-warum-zwei-skripte-und-zwei-crontabs">1. Warum zwei Skripte und zwei Crontabs</h2>
+<p>Die Compose-Datei verwendet <code>~</code> in ihren Volume-Pfaden, zum Beispiel
+<code>~/docker/config/plex:/config</code>. Docker Compose löst <code>~</code> über das <code>$HOME</code>
+desjenigen auf, der den Befehl ausführt. Unter <code>sudo</code> oder in der Crontab
+von root ist <code>$HOME</code> gleich <code>/root</code>, sodass das Bind-Mount stillschweigend
+zu <code>/root/docker/config/plex</code> wird — einem leeren Verzeichnis. Die
+Container starten dann mit Werkseinstellungen neu.</p>
+<p>Den Unterschied kannst du selbst sehen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>~/docker<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;source:&#39;</span><span class="w">   </span><span class="c1"># /home/&lt;user&gt;/docker/...</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;source:&#39;</span><span class="w">             </span><span class="c1"># /root/docker/...</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Betrifft nur Befehle, die Container erzeugen</p>
+<p>Das Backup-Skript aus <a href="../07-backups/">Datensicherung</a> läuft als root,
+ruft aber nur <code>docker compose stop</code> und <code>start</code> auf. Diese wirken auf
+bestehende Container und lesen die Volume-Pfade nie neu ein.
+<code>docker compose up -d</code> liest sie hingegen neu ein. Deshalb muss der
+Update-Job als dein Admin-Benutzer laufen — der ohnehin in der Gruppe
+<code>docker</code> ist und daher gar kein <code>sudo</code> braucht.</p>
+</div>
+<p>Also:</p>
+<ul>
+<li><strong>apt</strong> -&gt; <code>/usr/local/sbin/apt-update-upgrade.sh</code>, Crontab von root.</li>
+<li><strong>Docker</strong> -&gt; <code>/usr/local/bin/update-docker-media-server-stack.sh</code>,
+  Crontab deines Benutzers.</li>
+</ul>
+<p>Beide Skripte liegen in root-eigenen Verzeichnissen, damit kein
+unprivilegierter Prozess einen unbeaufsichtigt laufenden Job verändern
+kann.</p>
+<h2 id="2-das-apt-skript">2. Das apt-Skript</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/usr/local/sbin/apt-update-upgrade.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">set</span><span class="w"> </span>-uo<span class="w"> </span>pipefail
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="w">   </span><span class="c1"># cron has no TTY, never prompt</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NEEDRESTART_MODE</span><span class="o">=</span>a<span class="w">               </span><span class="c1"># restart affected services without asking</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== </span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%F %T&#39;</span><span class="k">)</span><span class="s2"> apt update ===&quot;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>apt-get<span class="w"> </span>update<span class="w"> </span>-qq<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: update failed&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== upgrade ===&quot;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>apt-get<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span>-o<span class="w"> </span>Dpkg::Options::<span class="o">=</span>--force-confdef<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span>-o<span class="w"> </span>Dpkg::Options::<span class="o">=</span>--force-confold<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span>upgrade
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== autoremove / autoclean ===&quot;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>apt-get<span class="w"> </span>-y<span class="w"> </span>--purge<span class="w"> </span>autoremove
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>apt-get<span class="w"> </span>-y<span class="w"> </span>autoclean
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>/var/run/reboot-required<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;NOTE: reboot required -&gt; </span><span class="k">$(</span>tr<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span>&lt;<span class="w"> </span>/var/run/reboot-required.pkgs<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="k">fi</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== done ===&quot;</span>
+</code></pre></div>
+<p>Mache es root-eigen und ausführbar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:root<span class="w"> </span>/usr/local/sbin/apt-update-upgrade.sh
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/sbin/apt-update-upgrade.sh
+</code></pre></div>
+<p>Warum diese Details wichtig sind:</p>
+<ul>
+<li>
+<p><code>apt-get</code>, nicht <code>apt</code>. Der Befehl <code>apt</code> gibt beim Einsatz in Skripten
+  <em>"does not have a stable CLI interface"</em> aus, und seine Fortschritts-
+  balken füllen das Log mit Steuerzeichen.</p>
+</li>
+<li>
+<p><code>DEBIAN_FRONTEND=noninteractive</code> verhindert, dass dpkg einen Dialog
+  öffnet, den niemand beantworten kann. Ohne diese Variable blockiert
+  eine einzige Rückfrage zu einer Konfigurationsdatei den Job dauerhaft
+  und hält dabei die dpkg-Sperre.</p>
+</li>
+<li>
+<p><code>--force-confold</code> behält deine bestehenden Konfigurationsdateien, wenn
+  ein Paket eine geänderte Version mitbringt. Das ist die konservative
+  Wahl: Deine Anpassungen bleiben erhalten, und die neue Version wird als
+  <code>.dpkg-dist</code>-Datei daneben abgelegt.</p>
+</li>
+<li>
+<p><code>upgrade</code>, nicht <code>full-upgrade</code>. Das einfache <code>upgrade</code> entfernt nie
+  ein Paket, um eine Abhängigkeit aufzulösen. Führe
+  <code>sudo apt-get full-upgrade</code> von Hand aus, wenn ein Debian-Point-Release
+  das erfordert, damit du nachlesen kannst, was es vorhat.</p>
+</li>
+<li>
+<p><code>NEEDRESTART_MODE=a</code> weist Debians <code>needrestart</code> an, betroffene Dienste
+  automatisch neu zu starten statt nachzufragen. Ohne diese Variable
+  greifen Bibliotheks-Updates erst nach dem nächsten Neustart.</p>
+</li>
+</ul>
+<h2 id="3-das-docker-skript">3. Das Docker-Skript</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/usr/local/bin/update-docker-media-server-stack.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">set</span><span class="w"> </span>-uo<span class="w"> </span>pipefail
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:/usr/bin:/bin
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nv">COMPOSE_DIR</span><span class="o">=</span><span class="s2">&quot;/home/&lt;user&gt;/docker&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$COMPOSE_DIR</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: cannot cd to </span><span class="nv">$COMPOSE_DIR</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== </span><span class="k">$(</span>date<span class="w"> </span><span class="s1">&#39;+%F %T&#39;</span><span class="k">)</span><span class="s2"> docker compose pull ===&quot;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>pull<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ERROR: pull failed, leaving containers untouched.&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">fi</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== recreating changed containers ===&quot;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== pruning old images ===&quot;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>docker<span class="w"> </span>image<span class="w"> </span>prune<span class="w"> </span>-f
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== done ===&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:root<span class="w"> </span>/usr/local/bin/update-docker-media-server-stack.sh
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/bin/update-docker-media-server-stack.sh
+</code></pre></div>
+<p>Was das Skript tut:</p>
+<ul>
+<li>
+<p>Bricht ab, wenn <code>pull</code> fehlschlägt. Ein unvollständiger Pull würde
+  sonst dazu führen, dass <code>up -d</code> einige Dienste auf neuen und andere auf
+  alten Images neu erstellt — der Zustand, der am schwersten zu
+  diagnostizieren ist.</p>
+</li>
+<li>
+<p>Erstellt nur Container neu, deren Image sich tatsächlich geändert hat.
+  Dienste mit unverändertem Digest laufen unberührt weiter.</p>
+</li>
+<li>
+<p>Löscht verwaiste Images, damit sich die ersetzten Layer nicht auf der
+  Systemplatte ansammeln.</p>
+</li>
+</ul>
+<h2 id="4-manueller-test">4. Manueller Test</h2>
+<p>Führe beide vor dem Einplanen einmal von Hand aus. Beachte, dass das
+Docker-Skript <strong>ohne</strong> <code>sudo</code> aufgerufen wird:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>/usr/local/sbin/apt-update-upgrade.sh
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>/usr/local/bin/update-docker-media-server-stack.sh
+</code></pre></div>
+<p>Bestätige danach, dass der Stack gesund ist und die Volume-Pfade noch
+stimmen:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>~/docker/docker-compose.yml<span class="w"> </span>ps
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>~/docker/docker-compose.yml<span class="w"> </span>config<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;source:&#39;</span>
+</code></pre></div>
+<h2 id="5-mit-cron-einplanen">5. Mit Cron einplanen</h2>
+<p>Der Backup-Job aus <a href="../07-backups/">Datensicherung</a> läuft montags um 03:00
+Uhr und stoppt währenddessen alle Container. Die beiden Update-Jobs
+werden so darum herum gelegt, dass sich nie zwei Jobs sich gegenseitig beeinträchtigen:</p>
+<table>
+<thead>
+<tr>
+<th>Zeit</th>
+<th>Job</th>
+<th>Läuft als</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>montags 03:00</td>
+<td><code>backup-docker-config.sh</code></td>
+<td>root</td>
+</tr>
+<tr>
+<td>Di–So 04:30</td>
+<td><code>apt-update-upgrade.sh</code></td>
+<td>root</td>
+</tr>
+<tr>
+<td>montags 06:00</td>
+<td><code>update-docker-media-server-stack.sh</code></td>
+<td>Admin-Benutzer</td>
+</tr>
+</tbody>
+</table>
+<p>Die Crontab von root, für apt:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>crontab<span class="w"> </span>-e
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>30 4 * * 0,2-6 /usr/local/sbin/apt-update-upgrade.sh &gt;&gt; /var/log/apt-update-upgrade.log 2&gt;&amp;1
+</code></pre></div>
+<p>Das Tagesfeld <code>0,2-6</code> bedeutet jeden Tag ausser Montag. Cron zählt <code>0</code>
+als Sonntag und <code>1</code> als Montag, <code>0,2-6</code> ist also Sonntag plus Dienstag
+bis Samstag. Der Montag bleibt für das Backup und das Container-Update
+frei.</p>
+<p>Deine eigene Crontab, für Docker — <strong>ohne <code>sudo</code></strong>, sonst bearbeitest du
+die Crontab von root und handelst dir das <code>$HOME</code>-Problem aus Abschnitt 1
+wieder ein:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/logs
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>crontab<span class="w"> </span>-e
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>0 6 * * 1 /usr/local/bin/update-docker-media-server-stack.sh &gt;&gt; /home/&lt;user&gt;/logs/update-docker-media-server-stack.log 2&gt;&amp;1
+</code></pre></div>
+<p>Warum das Container-Update am Montag um 06:00 Uhr liegt, drei Stunden
+nach dem Backup:</p>
+<ul>
+<li>
+<p><strong>Es hat immer ein frisches Backup im Rücken.</strong> Das Backup dauert rund
+  elf Minuten und ist um 06:00 Uhr längst fertig. Macht ein neues Image
+  einen Dienst kaputt, stammt der Wiederherstellungspunkt von diesem
+  Morgen und nicht von letzter Woche.</p>
+</li>
+<li>
+<p><strong>Um 06:00 Uhr an einem Montag streamt niemand.</strong> <code>docker compose up -d</code>
+  startet jeden Container neu, dessen Image sich geändert hat, und
+  unterbricht damit jede laufende Wiedergabe.</p>
+</li>
+</ul>
+<p>Warum Docker-Updates wöchentlich und nicht täglich: Jedes Image in der
+Compose-Datei ist auf <code>:latest</code> festgelegt, jeder Pull ist also ein
+ungeprüfter Versionssprung über den ganzen Stack. Wöchentlich bedeutet
+ein Wiederherstellungsfenster pro Woche statt sieben, gebunden an den
+Tag, an dem ein frisches Backup existiert.</p>
+<p>Prüfe nach den ersten geplanten Durchläufen die Logs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">30</span><span class="w"> </span>/var/log/apt-update-upgrade.log
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">30</span><span class="w"> </span>~/logs/update-docker-media-server-stack.log
+</code></pre></div>
+<h2 id="6-hinweise">6. Hinweise</h2>
+<ul>
+<li>
+<p><strong>Neustarts bleiben manuell.</strong> Das apt-Skript schreibt nur eine Zeile
+  <code>reboot required</code> in sein Log; es startet den Server nie von selbst
+  neu. Prüfe das mit <code>ls /var/run/reboot-required</code>. Wenn du es doch
+  automatisch willst, hält ein separater Root-Cron-Eintrag wie
+  <code>0 6 * * 1 [ -f /var/run/reboot-required ] &amp;&amp; /sbin/reboot</code> die
+  Entscheidung an einer sichtbaren Stelle.</p>
+</li>
+<li>
+<p><strong>Benachrichtigung bei Fehlern.</strong> Ein <code>MAILTO=du@example.com</code> am Anfang
+  einer Crontab lässt Cron dir jede Ausgabe eines Jobs per Mail schicken.
+  Das hilft nur, wenn der Server tatsächlich Mail versenden kann;
+  andernfalls sind die Log-Dateien dein einziger Kanal.</p>
+</li>
+<li>
+<p><strong><code>unattended-upgrades</code> ist die Alternative.</strong> Debian liefert für den
+  apt-Teil ein eigenes Paket mit, das Sperren, Wiederholungsversuche und
+  Mail-Berichte für dich übernimmt. Das Cron-Skript oben wird hier
+  verwendet, weil es Paket- und Container-Updates an einem Ort und mit
+  einem einheitlichen Log-Stil hält.</p>
+</li>
+<li>
+<p><strong>Image-Tags festlegen.</strong> Falls ein Update einmal einen Dienst kaputt
+  macht, ersetze <code>:latest</code> in der Compose-Datei für genau diesen Dienst
+  durch einen konkreten Versions-Tag. Der Update-Job lässt ihn dann dort,
+  bis du den Tag wieder änderst.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

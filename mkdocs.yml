@@ -1,4 +1,4 @@
-site_name: Media Server Guide
+site_name: Homelab Guide
 site_author: Yanick Spichty
 site_url: https://yanick.spichty.org/media-server-guide/
 
@@ -9,6 +9,7 @@ theme:
     primary: blue grey
     accent: light blue
   features:
+    - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
@@ -30,6 +31,8 @@ plugins:
           build: true
           nav_translations:
             Home: Startseite
+            Media Server: Medienserver
+            Home Network: Heimnetzwerk
             System Setup: Systemeinrichtung
             Debian Installation: Debian-Installation
             User & Network: Benutzer & Netzwerk
@@ -59,18 +62,22 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - System Setup:
-      - Debian Installation: 01-debian.md
-      - User & Network: 02-network.md
-      - Storage (MergerFS): 03-storage.md
-      - Energy Optimization: 06-energy.md
-  - Containers & Routing:
-      - Docker & Services: 04-docker.md
-      - VPS Gateway: 05-vps.md
-  - Maintenance:
-      - Backups: 07-backups.md
-      - Updates: 10-updates.md
-  - Resources:
-      - Cost Analysis: 08-costs.md
-      - Further Links & Related Guides: 09-further-reading.md
+  - Media Server:
+      - System Setup:
+          - Debian Installation: 01-debian.md
+          - User & Network: 02-network.md
+          - Storage (MergerFS): 03-storage.md
+          - Energy Optimization: 06-energy.md
+      - Containers & Routing:
+          - Docker & Services: 04-docker.md
+          - VPS Gateway: 05-vps.md
+      - Maintenance:
+          - Backups: 07-backups.md
+          - Updates: 10-updates.md
+      - Resources:
+          - Cost Analysis: 08-costs.md
+          - Further Links & Related Guides: 09-further-reading.md
+  - Home Network:
+      - UniFi Access Points: 12-unifi-access-points.md
+      - UniFi Controller (Docker): 11-unifi-controller.md
 

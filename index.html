@@ -29,7 +29,7 @@
     
     
       
-        <title>Media Server Guide</title>
+        <title>Homelab Guide</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#media-server-guide" class="md-skip">
+        <a href="#homelab-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -90,11 +90,9 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Media Server Guide" class="md-header__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href="." title="Homelab Guide" class="md-header__button md-logo" aria-label="Homelab Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +106,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Media Server Guide
+            Homelab Guide
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -202,6 +200,86 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="01-debian/" class="md-tabs__link">
+          
+  
+  
+  Media Server
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="12-unifi-access-points/" class="md-tabs__link">
+          
+  
+  
+  Home Network
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -215,16 +293,18 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Media Server Guide" class="md-nav__button md-logo" aria-label="Media Server Guide" data-md-component="logo">
+    <a href="." title="Homelab Guide" class="md-nav__button md-logo" aria-label="Homelab Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Media Server Guide
+    Homelab Guide
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -296,6 +376,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#media-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Media Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-to-read-the-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -305,12 +397,39 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#arr-apps-and-others" class="md-nav__link">
     <span class="md-ellipsis">
       
         Arr Apps and others
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legal-notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legal Notice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Network
       
     </span>
   </a>
@@ -322,17 +441,6 @@
     <span class="md-ellipsis">
       
         Work in Progress
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#legal-notice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Legal Notice
       
     </span>
   </a>
@@ -358,19 +466,71 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Media Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
   
@@ -388,8 +548,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -517,9 +677,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -529,19 +690,19 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   
@@ -559,8 +720,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -632,9 +793,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -644,19 +806,19 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
@@ -674,8 +836,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -747,9 +909,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -759,19 +922,19 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
@@ -789,8 +952,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -862,6 +1025,129 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Network
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="12-unifi-access-points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi Access Points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11-unifi-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi Controller (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
   </ul>
 </nav>
@@ -890,6 +1176,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#media-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Media Server
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Media Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#how-to-read-the-guide" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -899,12 +1197,39 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#arr-apps-and-others" class="md-nav__link">
     <span class="md-ellipsis">
       
         Arr Apps and others
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legal-notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Legal Notice
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Network
       
     </span>
   </a>
@@ -916,17 +1241,6 @@
     <span class="md-ellipsis">
       
         Work in Progress
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#legal-notice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Legal Notice
       
     </span>
   </a>
@@ -950,17 +1264,47 @@
 
 
 
-<h1 id="media-server-guide">Media Server Guide</h1>
-<p>Setting up a proper Linux server to host a media library can be quite time-consuming — even when using modern tools. This is why I created this guide.</p>
-<h2 id="how-to-read-the-guide">How to Read the Guide?</h2>
-<p>The guide is structured in chapters and sections. The chapters are ordered and the order of the chapters and sections within each chapter is exactly the order in which the steps for the setup should be executed.</p>
-<h2 id="arr-apps-and-others">Arr Apps and others</h2>
+<h1 id="homelab-guide">Homelab Guide</h1>
+<p>This site collects the guides for my home server and the network around
+it. It consists of two independent parts; each can be read on its own.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Content</th>
+<th>For whom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#media-server">Media Server</a></td>
+<td>Debian server with Plex and the *arr apps</td>
+<td>Anyone building the server themselves</td>
+</tr>
+<tr>
+<td><a href="#home-network">Home Network</a></td>
+<td>WiFi with UniFi access points</td>
+<td>Anyone operating or re-installing the access points</td>
+</tr>
+</tbody>
+</table>
+<h2 id="media-server">Media Server</h2>
+<p>Setting up a proper Linux server to host a media library can be quite time-consuming — even when using modern tools. This is why I created this guide. It starts with the <a href="01-debian/">Debian installation</a>.</p>
+<h3 id="how-to-read-the-guide">How to Read the Guide?</h3>
+<p>This part is structured in chapters and sections. The chapters are ordered and the order of the chapters and sections within each chapter is exactly the order in which the steps for the setup should be executed.</p>
+<h3 id="arr-apps-and-others">Arr Apps and others</h3>
 <p>Configuration guides for Sonarr, Radarr, Seerr, NZBGet, Unpackerr and Plex in detail are not provided yet. Since user preferences differ for these tools, priority is rather low for these guides — nonetheless this is planned for future updates. Further reading material is provided in <a href="09-further-reading/">Further Links &amp; Related Guides</a>.</p>
+<h3 id="legal-notice">Legal Notice</h3>
+<p>This notice applies to the media server part only. Please keep in mind that downloading copyright protected material is not legal in every region. The media server guide is specifically written to follow the <a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en">Federal Act on Copyright and Related Rights</a> of Switzerland.</p>
+<h2 id="home-network">Home Network</h2>
+<p>WiFi in the house runs on two Ubiquiti UniFi access points. This part is not needed for the media server and consists of two pages for different readers:</p>
+<ul>
+<li><a href="12-unifi-access-points/">UniFi Access Points</a> — everything about the devices themselves: what the light means, how to check that everything runs, what to do when something fails, and how to reset a device and set it up again. This is the page for everyday use.</li>
+<li><a href="11-unifi-controller/">UniFi Controller (Docker)</a> — the one-time installation of the controller on the Debian server: Docker Compose, ports, database. Only needed when the controller is set up from scratch.</li>
+</ul>
 <h2 id="work-in-progress">Work in Progress</h2>
 <p>This documentation is by no means final and can always be improved further.
 Security has been taken into consideration, but there might still be risks and issues with this setup. You are expected to think for yourself about why we do each step and how to do it properly.</p>
-<h2 id="legal-notice">Legal Notice</h2>
-<p>Please keep in mind that downloading copyright protected material is not legal in every region. This guide is specifically written to follow the <a href="https://www.fedlex.admin.ch/eli/cc/1993/1798_1798_1798/en">Federal Act on Copyright and Related Rights</a> of Switzerland.</p>
 
 
 
@@ -1011,7 +1355,7 @@ Security has been taken into consideration, but there might still be risks and i
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>

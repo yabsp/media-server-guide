@@ -1,0 +1,1926 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Yanick Spichty">
+      
+      
+        <link rel="canonical" href="https://yanick.spichty.org/media-server-guide/12-unifi-access-points/">
+      
+      
+        <link rel="prev" href="../09-further-reading/">
+      
+      
+        <link rel="next" href="../11-unifi-controller/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../de/12-unifi-access-points/" hreflang="de">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>UniFi Access Points - Homelab Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unifi-access-points" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Homelab Guide" class="md-header__button md-logo" aria-label="Homelab Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Homelab Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UniFi Access Points
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../de/12-unifi-access-points/" hreflang="de" class="md-select__link">
+              Deutsch (Schweiz)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-debian/" class="md-tabs__link">
+          
+  
+  
+  Media Server
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Home Network
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Homelab Guide" class="md-nav__button md-logo" aria-label="Homelab Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Homelab Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Media Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Media Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debian Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User & Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage (MergerFS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy Optimization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers & Routing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Containers & Routing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker & Services
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-vps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Maintenance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-backups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-updates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-costs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cost Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-further-reading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Further Links & Related Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Network
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home Network
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi Access Points
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi Access Points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-essentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Essentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-light-on-the-access-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Light on the Access Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-opening-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Opening the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-checking-that-everything-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Checking That Everything Runs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-when-something-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. When Something Does Not Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. When Something Does Not Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wifi-is-weak-or-gone-in-one-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WiFi is weak or gone in one place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-is-gone-in-the-whole-house" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WiFi is gone in the whole house
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-device-is-offline-in-the-controller-but-wifi-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A device is "Offline" in the controller, but WiFi works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-a-power-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After a power cut
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-none-of-this-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If none of this helps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-restart-and-light-via-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Restart and Light via the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-basic-controller-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Basic Controller Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resetting-and-setting-up-an-access-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resetting and Setting Up an Access Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-static-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Static IP Address
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-wifi-and-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. WiFi and Mesh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. WiFi and Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-not-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh (not in use)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-finding-things-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Finding Things Again
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-unifi-controller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi Controller (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-the-essentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Essentials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-light-on-the-access-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Light on the Access Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-opening-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Opening the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-checking-that-everything-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Checking That Everything Runs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-when-something-does-not-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. When Something Does Not Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. When Something Does Not Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wifi-is-weak-or-gone-in-one-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WiFi is weak or gone in one place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi-is-gone-in-the-whole-house" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WiFi is gone in the whole house
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-device-is-offline-in-the-controller-but-wifi-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A device is "Offline" in the controller, but WiFi works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-a-power-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After a power cut
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-none-of-this-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If none of this helps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-restart-and-light-via-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Restart and Light via the Controller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Updates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-basic-controller-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Basic Controller Settings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-resetting-and-setting-up-an-access-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Resetting and Setting Up an Access Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-static-ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Static IP Address
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-wifi-and-mesh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. WiFi and Mesh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. WiFi and Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mesh-not-in-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesh (not in use)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-finding-things-again" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Finding Things Again
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unifi-access-points">UniFi Access Points</h1>
+<p>This page holds everything about the WiFi devices themselves: everyday
+use, fixing faults, and resetting and setting up a device again.
+Installing the controller on the server is kept separately in
+<a href="../11-unifi-controller/">UniFi Controller (Docker)</a> and is not needed
+here.</p>
+<p>Sections 1 to 7 need no prior knowledge. From section 8 on, a terminal
+is required.</p>
+<h2 id="1-the-essentials">1. The Essentials</h2>
+<ul>
+<li>There are two WiFi transmitters (<strong>access points</strong>) in the house:
+  <code>UG-AP</code> and <code>Licht-AP</code>. Both broadcast the same WiFi; devices switch
+  to the nearest one on their own.</li>
+<li>They are managed through a web page, the <strong>controller</strong>. It runs on
+  the server in the house.</li>
+<li>WiFi also works while the server is off. Only the management page is
+  unavailable then.</li>
+<li>Updates install themselves, every night at 3 AM.</li>
+</ul>
+<h2 id="2-the-light-on-the-access-point">2. The Light on the Access Point</h2>
+<table>
+<thead>
+<tr>
+<th>Light</th>
+<th>Meaning</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blue, solid</td>
+<td>Everything is fine</td>
+<td>Nothing</td>
+</tr>
+<tr>
+<td>White, flashing</td>
+<td>Device is starting</td>
+<td>Wait two minutes</td>
+</tr>
+<tr>
+<td>White and blue alternating</td>
+<td>Update in progress</td>
+<td>Wait, <strong>do not unplug</strong></td>
+</tr>
+<tr>
+<td>Blue, with short gaps</td>
+<td>No connection to the network</td>
+<td>See section 5</td>
+</tr>
+<tr>
+<td>White, solid</td>
+<td>Device is not set up</td>
+<td>Set it up, see section 9</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>No power</td>
+<td>See section 5</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-opening-the-controller">3. Opening the Controller</h2>
+<ol>
+<li>Connect to the network in the house and open
+   <code>https://192.168.0.50:8443</code> in the browser.</li>
+<li>The browser warns about an insecure connection. That is normal here:
+   click <em>Advanced</em> and then <em>Proceed to 192.168.0.50</em>.</li>
+<li>Sign in with the management account.</li>
+<li>A window titled <em>Upgrade to UniFi OS Server</em> can be closed with the
+   cross at the top right.</li>
+</ol>
+<h2 id="4-checking-that-everything-runs">4. Checking That Everything Runs</h2>
+<p>Click <strong>UniFi Devices</strong> on the left (the round icon). The list shows
+both access points with their state.</p>
+<p><img alt="Device list with the status of each access point" src="../assets/unifi/device-list.png" /></p>
+<ul>
+<li><strong>Online</strong> with a green dot: the device works.</li>
+<li><strong>Offline</strong> in grey text: the device cannot be reached.</li>
+</ul>
+<p>Clicking a device opens its details on the right. The <strong>Overview</strong> tab
+shows model, IP address, MAC address and version.</p>
+<p><img alt="Device overview with model, IP address and MAC address" src="../assets/unifi/device-overview-mac.png" /></p>
+<h2 id="5-when-something-does-not-work">5. When Something Does Not Work</h2>
+<p>Go through the steps in order and check after each one whether the
+problem is solved.</p>
+<h3 id="wifi-is-weak-or-gone-in-one-place">WiFi is weak or gone in one place</h3>
+<ol>
+<li>Look at the light of the nearest access point and compare it with the
+   table in section 2.</li>
+<li>If the light is off: check that the small power supply (<strong>PoE
+   injector</strong>) is plugged into the socket and both cables on it are
+   seated firmly. The <code>POE</code> socket leads to the access point, <code>LAN</code> to
+   the router or switch.</li>
+<li>Restart the device: pull the power supply out of the socket, wait ten
+   seconds and plug it back in. After two to three minutes the light
+   should be solid blue.</li>
+</ol>
+<h3 id="wifi-is-gone-in-the-whole-house">WiFi is gone in the whole house</h3>
+<ol>
+<li>Check the router first: does the internet work on a device that is
+   connected by cable?</li>
+<li>Restart both access points one after the other, as described above.</li>
+</ol>
+<h3 id="a-device-is-offline-in-the-controller-but-wifi-works">A device is "Offline" in the controller, but WiFi works</h3>
+<p>The device is working but cannot reach the controller.</p>
+<ol>
+<li>Check that the <strong>Inform Host Override</strong> is set (section 8).</li>
+<li>Tell the device the controller address again (section 9, step 3,
+   with the login from section 8 instead of <code>ubnt</code>).</li>
+</ol>
+<h3 id="after-a-power-cut">After a power cut</h3>
+<p>There is nothing to do. All devices start on their own and keep their
+settings.</p>
+<h3 id="if-none-of-this-helps">If none of this helps</h3>
+<p>If a device stays off, offline or solid white after a restart and ten
+minutes of waiting, reset it and set it up again (section 9).</p>
+<h2 id="6-restart-and-light-via-the-controller">6. Restart and Light via the Controller</h2>
+<p>Click a device in the device list, switch to the <strong>Settings</strong> tab (gear)
+and scroll to the <strong>Manage</strong> section.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Restart</strong></td>
+<td>Restarts the device without anyone having to go there.</td>
+</tr>
+<tr>
+<td><strong>Locate</strong></td>
+<td>Makes the light flash to help find the device.</td>
+</tr>
+<tr>
+<td><strong>LED</strong></td>
+<td>Switches the light on or off permanently.</td>
+</tr>
+<tr>
+<td><strong>Remove</strong></td>
+<td>Removes the device from the controller and resets it. It then has to be set up again.</td>
+</tr>
+<tr>
+<td><strong>Disable</strong></td>
+<td>Switches off the WiFi of this device.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-updates">7. Updates</h2>
+<p>Updates for the access points install automatically. The device restarts
+in the process, and WiFi drops out in that place for a few minutes. That
+is why it happens at 3 AM.</p>
+<p>The schedule and the current state are shown under <em>UniFi Devices</em> -&gt;
+<strong>Device Updates &amp; Settings</strong> (bottom left).</p>
+<h2 id="8-basic-controller-settings">8. Basic Controller Settings</h2>
+<p>Open <strong>UniFi Devices</strong> and click <strong>Device Updates &amp; Settings</strong> at the
+bottom left. The <strong>Device SSH Settings</strong> section holds two settings that
+apply to all devices.</p>
+<p><img alt="Device SSH Settings section" src="../assets/unifi/device-ssh-settings.png" /></p>
+<ul>
+<li><strong>Inform Host Override:</strong> has to be enabled and contain
+  <code>192.168.0.50</code>. The controller runs in a container and would otherwise
+  give the devices an address they cannot reach.</li>
+<li><strong>Device SSH Authentication:</strong> username and password for logging in to
+  set-up devices over SSH. The eye next to the password shows it in
+  plain text.</li>
+</ul>
+<h2 id="9-resetting-and-setting-up-an-access-point">9. Resetting and Setting Up an Access Point</h2>
+<p>This procedure applies to a new device just as to one that no longer
+responds. The device loses all its settings and gets them back from the
+controller in step 4.</p>
+<ol>
+<li>
+<p><strong>Reset.</strong> Hold the reset button next to the network socket with a
+   paper clip for about 10 seconds while the device has power. It
+   restarts; afterwards the light is solid white.</p>
+</li>
+<li>
+<p><strong>Check the connection.</strong> The device has to be connected by network
+   cable. On the PoE injector: <code>POE</code> to the access point (port <code>Main</code>),
+   <code>LAN</code> to the router or switch.</p>
+</li>
+<li>
+<p><strong>Set the controller address.</strong> The device does not find the
+   controller on its own. Its IP address is in the router's device list;
+   username and password are both <code>ubnt</code> after a reset.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh<span class="w"> </span>ubnt@&lt;ap-ip&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>set-inform<span class="w"> </span>http://192.168.0.50:8081/inform
+</code></pre></div>
+<p>The general format is
+<code>set-inform http://&lt;controller-ip&gt;:8080/inform</code>. <code>8080</code> is the
+default port of a UniFi controller; here it is <code>8081</code>, because
+<code>8080</code> is already taken on the server.</p>
+<p>If SSH aborts with <code>no matching host key type</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh<span class="w"> </span>-o<span class="w"> </span><span class="nv">HostKeyAlgorithms</span><span class="o">=</span>+ssh-rsa<span class="w"> </span>-o<span class="w"> </span><span class="nv">PubkeyAcceptedAlgorithms</span><span class="o">=</span>+ssh-rsa<span class="w"> </span>ubnt@&lt;ap-ip&gt;
+</code></pre></div>
+</li>
+<li>
+<p><strong>Adopt.</strong> The device shows up under <em>UniFi Devices</em>. Click
+   <strong>Adopt</strong>. If it was already in the list, it takes over its earlier
+   settings. If it stays stuck in "Adopting", run the <code>set-inform</code>
+   command a second time.</p>
+</li>
+<li>
+<p><strong>Verify.</strong> The light is solid blue and the device is "Online" in the
+   list. For a new device, continue with name, firmware update and the
+   static IP address (section 10).</p>
+</li>
+</ol>
+<p>From adoption on, the SSH login from section 8 applies, no longer
+<code>ubnt</code>. Together with the static IP address from section 10, the login
+then is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh<span class="w"> </span>&lt;new-username&gt;@&lt;static-ip&gt;
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">When to reset?</p>
+<p>A restart (briefly cutting the power) erases nothing and is always
+the first attempt. Resetting is the second step, if the device still
+does not run afterwards.</p>
+</div>
+<h2 id="10-static-ip-address">10. Static IP Address</h2>
+<p>Open the device in the list, switch to the <strong>Settings</strong> tab (gear) and
+scroll to <strong>IP Settings</strong>. Change from <code>DHCP</code> to <code>Static</code>.</p>
+<p><img alt="IP Settings of an access point with a static address" src="../assets/unifi/device-ip-settings.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP Address</td>
+<td><code>192.168.0.10</code> (<code>UG-AP</code>), <code>192.168.0.11</code> (<code>Licht-AP</code>)</td>
+</tr>
+<tr>
+<td>Subnet Mask</td>
+<td><code>255.255.255.0</code></td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td><code>192.168.0.1</code></td>
+</tr>
+<tr>
+<td>Preferred DNS</td>
+<td><code>1.1.1.1</code></td>
+</tr>
+<tr>
+<td>Alternate DNS</td>
+<td><code>8.8.8.8</code></td>
+</tr>
+</tbody>
+</table>
+<p>The addresses have to be outside the router's DHCP range, otherwise the
+router may hand them out a second time.</p>
+<h2 id="11-wifi-and-mesh">11. WiFi and Mesh</h2>
+<p><strong>Create or change the WiFi</strong> under <em>Settings -&gt; WiFi</em>: name and
+password. The network is broadcast on all access points automatically.</p>
+<h3 id="mesh-not-in-use">Mesh (not in use)</h3>
+<p>Both access points are on a cable; a wireless uplink (mesh) is not used.
+Should a device without a network cable be added later:</p>
+<ol>
+<li>
+<p>The switches are set per device in the same tab as the IP settings,
+   right above <em>IP Settings</em>:</p>
+<ul>
+<li><strong>Mesh Parent</strong> on the wired access point.</li>
+<li><strong>Mesh Connect</strong> on the access point without a network cable.</li>
+</ul>
+</li>
+<li>
+<p>Set the device up on a cable first, then give it power only at its
+   destination. After five to ten minutes it is "Online" again with a
+   wireless uplink.</p>
+</li>
+</ol>
+<p>A wireless uplink through concrete ceilings is the most common cause of
+unstable access points. Wherever possible, run a cable.</p>
+<h2 id="12-finding-things-again">12. Finding Things Again</h2>
+<table>
+<thead>
+<tr>
+<th>Looking for</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAC address, IP, firmware version</td>
+<td>Click the device, <strong>Overview</strong> tab</td>
+</tr>
+<tr>
+<td>Change the static IP</td>
+<td>Click the device, <strong>Settings</strong> tab -&gt; <em>IP Settings</em></td>
+</tr>
+<tr>
+<td>SSH username and password</td>
+<td><em>UniFi Devices</em> -&gt; <strong>Device Updates &amp; Settings</strong> -&gt; <em>Device SSH Settings</em></td>
+</tr>
+<tr>
+<td>Inform Host Override</td>
+<td>same place</td>
+</tr>
+<tr>
+<td>Inform address for <code>set-inform</code></td>
+<td><code>http://192.168.0.50:8081/inform</code></td>
+</tr>
+<tr>
+<td>SSH login on a set-up device</td>
+<td><code>ssh &lt;new-username&gt;@&lt;static-ip&gt;</code></td>
+</tr>
+<tr>
+<td>Controller version</td>
+<td>Dashboard, top left tile</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
